@@ -1,0 +1,152 @@
+body {
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    background-color: #F8F1F1;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Onemogućava horizontalni skrol */
+    width: 100%;
+
+}
+html{
+    overflow-x: hidden; /* Onemogućava horizontalni skrol */
+    width: 100%;
+}
+
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #00509e;
+}
+
+.section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f1f1f1;
+}
+
+.section h2 {
+    color: #003d7a;
+}
+.h2 {
+    color: #003d7a;
+}
+
+/* Stil za raspored testova */
+#raspored-testova {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.test-options {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.test-option {
+    position: relative;
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.test-option span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333; /* Neutralna boja teksta */
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease; /* Animacija boje */
+}
+.span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: black; /* Neutralna boja teksta */
+    cursor: pointer;
+    padding: 5px;
+    transition: color 0.3s ease; /* Animacija boje */
+}
+.span:hover {
+    color: #00509e; /* Plava na hover */
+}
+
+.test-option span:hover {
+    color: #00509e; /* Plava na hover */
+}
+
+/* Dropdown meni */
+.Ddropdown {
+    display: none; /* Skriven po defaultu */
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00509e; /* Tamnoplava pozadina */
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Senka za bolji izgled */
+    z-index: 1000;
+    opacity: 0; /* Skriven po defaultu */
+    pointer-events: none; /* Sprečava klik dok nije vidljiv */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Animacija otvaranja */
+}
+
+.test-option:hover .Ddropdown {
+    display: block;
+    opacity: 1; /* Vidljivost menija */
+    pointer-events: auto; /* Omogućava klik */
+    transform: translateX(-50%) translateY(0); /* Resetuje transformaciju za animaciju */
+}
+
+.Ddropdown li {
+    list-style: none;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.Ddropdown a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 8px 12px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animacija na hover */
+}
+
+.Ddropdown a:hover {
+    background-color: #003d7a; /* Tamnija plava na hover */
+    transform: scale(1.05); /* Lagano povećanje na hover */
+}
+
+
+
+
+
+
+
+
+
+
+.prazan{
+    height: 90px;
+    width: 100%;
+    background-color: transparent;
+}
+.prazan1{
+    height: 30px;
+    width: 100%;
+    background-color: transparent;
+}

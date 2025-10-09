@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="sr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>XIV beogradska gimnazija</title>
+    <link rel="icon" href="slike/ikonica.png" type="image/png">
+    <link rel="stylesheet" href="stil.css">
+    <link rel="stylesheet" href="navbar.css"> <!-- Povezivanje sa CSS fajlom -->
+    
+    
+    
+    
+</head>
+
+
+
+<body>
+    <body>
+        
+        <!-- Desktop Navbar -->
+        <nav class="navbar desktop-navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-brand">
+                <img src="slike/konceptZaLogo.png" alt="Logo" class="navbar-logo">
+                <span class="navbar-title">XIV гимназија</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <ul class="navbar-menu">
+                <li><a href="index.html">Почетна</a></li>
+                <li class="dropdown"><a href="#">О школи▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="skoli/istorijat.html">Историјат</a>
+                        <a class="hRed" href="skoli/ucenik.html">Ученик</a>
+                        <a class="hRed" href="skoli/zaposleni.html">Запослени</a>
+                        <a class="hRed" href="skoli/upis.html">Упис</a> 
+                        <a class="hRed" href="skoli/javneNabavke.html">Јавне набавке</a>
+                        <a class="hRed" href="skoli/erasmus.html">Erasmus</a>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="#">Вести▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="vesti/novosti.html">Новости</a>
+                        <a class="hRed" href="vesti/Casopis.html">Школски часопис</a>
+                        <a class="hRed" href="vesti/arhiv.html">Aрхив</a>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="#">Настава▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="nastava/predmeti.html">Предмети</a>
+                        <a class="hRed" href="nastava/udzbenici.html">Уџбеници</a>
+                        <a class="hRed" href="nastava/IzPred.html">Изборни предмети</a>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="#">Активонсти▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="aktivnosti/ucenicki.html">Ученички парламент</a>
+                        <a class="hRed" href="aktivnosti/ekskurzije.html">Екскурзије и путовања</a>
+                        <a class="hRed" href="aktivnosti/sekcije.html">Секције и ваннаставне активности</a>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="orgrada/organizacijaRada.html">Организација рада</a>
+
+                </li>
+            </ul>
+            
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </nav>
+
+    <!-- Mobile Navbar with Hamburger Button -->
+    <div class="offcanvas" id="offcanvas">
+            <div class="offcanvas-header">
+            <button class="exit-btn" id="exit-btn">X</button>
+            </div>
+    <ul class="offcanvas-links">
+            <li>
+                <a href="index.html">Почетна</a>
+            </li>
+            <li>
+                    <a href="#" class="dropdown-toggle">O Skoli</a>
+                    <!-- Podmeni -->
+                    <ul class="dropdown-menu1">
+                        <li class="dropdown-content1"></li><a href="skoli/istorijat.html">Историјат</a></li>
+                        <li class="dropdown-content1"></li><a href="skoli/ucenik.html">Ученик</a></li>
+                        <li class="dropdown-content1"></li><a href="skoli/zaposleni.html">Запослени</a></li>
+                        <li class="dropdown-content1"></li><a href="skoli/upis.html">Упис</a> </li>
+                        <li class="dropdown-content1"></li><a href="skoli/javneNabavke.html">Јавне набавке</a></li>
+                        <li class="dropdown-content1"></li><a href="skoli/erasmus.html">Erasmus</a></li>
+                    </ul>
+            </li>
+
+            <li>
+                <a href="#" class="dropdown-toggle">Вестi</a>
+                <!-- Podmeni -->
+                <ul class="dropdown-menu1">
+                    <li class="dropdown-content1"></li><a href="vesti/novosti.html">Новости</a></li>
+                    <li class="dropdown-content1"></li><a href="vesti/Casopis.html">Школски часопис</a></li>
+                    <li class="dropdown-content1"></li><a href="vesti/arhiv.html">Aрхив</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="dropdown-toggle">Nastava</a>
+                    <!-- Podmeni -->
+                <ul class="dropdown-menu1">
+                   <li class="dropdown-content1"></li><a href="nastava/predmeti.html">Предмети</a></li>
+                   <li class="dropdown-content1"></li><a href="nastava/udzbenici.html">Уџбеници</a></li>
+                   <li class="dropdown-content1"></li><a href="nastava/IzPred.html">Изборни предмети</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">Активонсти</a>
+                <!-- Podmeni -->
+                <ul class="dropdown-menu1">
+                <li class="dropdown-content1"><a href="aktivnosti/ucenicki.html">Ученички парламент</a></li>
+                <li class="dropdown-content1"><a href="aktivnosti/ekskurzije.html">Екскурзије и путовања</a></li>
+                <li class="dropdown-content1"><a href="aktivnosti/sekcije.html">Секције и ваннаставне активности</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="orgrada/organizacijaRada">Organizacija rada</a>
+
+            </li>
+        </ul>
+    </div>
+
+ <div class = "prazan"></div>
+<!-- ringispis -->
+
+   
+    <div class="carousel">
+    <div class="carousel-image image1 active"></div>
+    <div class="carousel-image image2"></div>
+    <div class="carousel-image image3"></div>
+
+    <!-- Strelice za navigaciju -->
+    <button class="carousel-arrow left-arrow" onclick="prevSlide()">&#10094;</button>
+    <button class="carousel-arrow right-arrow" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+<!-- skolske vesti-->
+        <div class="news-section">
+        <h2 class="news-naslov">Школске вести</h2>
+        <div class="custom-divider"></div>
+        <div class = "prazan1"></div>
+        <div class="news-articles">
+            <div class="news-article">
+                <h3 class="news-title">Naslov vesti 1</h3>
+                <p class="news-date">1. novembar 2024.</p>
+                <p class="news-content">Kratak uvod u vest. Ovde ide sažetak koji daje osnovne informacije o događaju.</p>
+                <a href="novosti.html" class="read-more" >Прочитај више</a>
+            </div>
+            <div class="news-article">
+                <h3 class="news-title">Naslov vesti 2</h3>
+                <p class="news-date">29. oktobar 2024.</p>
+                <p class="news-content">Kratak uvod u vest. Ovde ide sažetak koji daje osnovne informacije o događaju.</p>
+                <a href="novosti.html" class="read-more">Прочитај више</a>
+            </div>
+            <div class="news-article">
+                <h3 class="news-title">Naslov vesti 3</h3>
+                <p class="news-date">26. oktobar 2024.</p>
+                <p class="news-content">Kratak uvod u vest. Ovde ide sažetak koji daje osnovne informacije o događaju.</p>
+                <a href="novosti.html" class="read-more">Прочитај више</a>
+            </div>
+            <div class="news-article">
+                <h3 class="news-title">Naslov vesti 4</h3>
+                <p class="news-date">24. oktobar 2024.</p>
+                <p class="news-content">Kratak uvod u vest. Ovde ide sažetak koji daje osnovne informacije o događaju.</p>
+                <a href="novosti.html" class="read-more">Прочитај више</a>
+            </div>
+            <div class="news-article">
+                <h3 class="news-title">Naslov vesti 5</h3>
+                <p class="news-date">20. oktobar 2024.</p>
+                <p class="news-content">Kratak uvod u vest. Ovde ide sažetak koji daje osnovne informacije o događaju.</p>
+                <a href="novosti.html" class="read-more">Прочитај више</a>
+            </div>
+            <div class="news-article">
+                <h3 class="news-title">Naslov vesti 6</h3>
+                <p class="news-date">15. oktobar 2024.</p>
+                <p class="news-content">Kratak uvod u vest. Ovde ide sažetak koji daje osnovne informacije o događaju.</p>
+                <a class="read-more">Прочитај више</a>
+            </div>
+        </div>
+        </div>
+        <div class="button-container">
+            <button class="read-more-button"  href="novosti.html">
+                <a href="novosti.html" class="read-more-button1">Прочитај више</a>
+            </button>
+        </div>
+    </section>
+
+   <!-- o skoli -->
+        <div class="about-section">
+            <div class="about-image">
+                <img src="slike/skola1.png" alt="Slika škole">
+            </div>
+            <div class="about-text">
+                <h2>О школи</h2>
+                <hr class="about-line">
+                <p class="about-sadrzaj">Četrnaesta beogradska gimnazija je savremena obrazovna ustanova posvećena razvoju i obrazovanju mladih, kombinujući visoke standarde sa inovativnim nastavnim metodama. Škola nudi širok izbor predmeta i nastavnih aktivnosti koje učenike pripremaju za akademske uspehe i buduće izazove. Nastava se fokusira na podsticanje kritičkog mišljenja, istraživačkog duha i kreativnosti, dok savremeni pristupi omogućavaju učenicima aktivno učešće u obrazovnom procesu.</p>
+                <p class="about-sadrzaj">Pored redovnih školskih aktivnosti, učenici imaju priliku da učestvuju u različitim vannastavnim sekcijama gde mogu razvijati talente i interesovanja. Stručan i posvećen nastavni kadar pruža podršku svakom učeniku, stvarajući prijateljsko okruženje koje ih inspiriše da otkriju i dostignu svoj puni potencijal, izgrađujući ne samo znanje već i vrednosti za budućnost.</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <p><strong>Адреса:</strong> Хаџи Проданова 5, Београд</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Контакт:</strong> Телефон: +381 11 123 4567 | Email: kontakt@skola.rs</p>
+            </div>
+        </div>
+        <hr class="footer-line">
+        <p class="footer-rights">© Четрнаеста београдска гимназија 2024. Сва права задржана. WEB DIZAJN: studio Srbljanović</p>
+    </footer>
+    
+    
+</body>
+
+<script>
+    //kod za ringispil
+    let currentIndex = 0;
+    const slides = document.querySelectorAll(".carousel-image");
+    const slideInterval = 25000; // 25 sekundi
+    
+    // Funkcija za prikaz sledećeg slajda
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === index);
+        });
+    }
+    
+    // Sledeći slajd
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+    
+    // Prethodni slajd
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    }
+    
+    // Automatsko menjanje slika svakih 25 sekundi
+   
+
+
+   // Dobavljanje referenci na elemente
+    const hamburger = document.getElementById('hamburger');
+    const offcanvas = document.getElementById('offcanvas');
+    const exitBtn = document.getElementById('exit-btn');
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+
+    // Funkcija za otvaranje offcanvas menija
+    hamburger.addEventListener('click', () => {
+        offcanvas.style.right = '0';
+    });
+
+    // Funkcija za zatvaranje offcanvas menija
+    exitBtn.addEventListener('click', () => {
+        offcanvas.style.right = '-250px';
+    });
+
+    // Dodaj događaj za otvaranje/zatvaranje podmenija
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', (e) => {
+            e.preventDefault(); // Sprečava default ponašanje linka
+
+            const dropdownMenu = toggle.nextElementSibling; // Pronalazi odgovarajući podmeni
+
+            // Zatvara sve otvorene podmenije i uklanja klasu 'active' sa svih strelica
+            document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                if (menu !== dropdownMenu) {
+                    menu.style.display = 'none';
+                }
+            });
+            document.querySelectorAll('.dropdown-toggle').forEach(item => {
+                if (item !== toggle) {
+                    item.classList.remove('active');
+                }
+            });
+
+            // Prikazuje ili sakriva podmeni i rotira strelicu
+            if (dropdownMenu.style.display === 'block') {
+                dropdownMenu.style.display = 'none';
+                toggle.classList.remove('active');
+            } else {
+                dropdownMenu.style.display = 'block';
+                toggle.classList.add('active');
+            }
+        });
+    });
+
+
+</script>
+
+</html>
+
+
