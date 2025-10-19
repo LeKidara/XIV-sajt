@@ -1,13 +1,25 @@
 function showTab(tabId) {
-    // Сакриј све таб панеле
     const panels = document.querySelectorAll('.tab-panel');
-    panels.forEach(panel => panel.classList.remove('active'));
-
-    // Скини "active" са свих табова
     const tabs = document.querySelectorAll('.tab');
+
+    // Скривање свих табова
+    panels.forEach(panel => {
+        panel.classList.remove('active');
+        panel.style.opacity = '0';
+    });
+
+    // Скидање "active" класе са свих дугмића
     tabs.forEach(tab => tab.classList.remove('active'));
 
-    // Прикажи изабрани таб и панел
-    document.getElementById(tabId).classList.add('active');
+    // Приказ изабраног таба
+    const activePanel = document.getElementById(tabId);
+    activePanel.classList.add('active');
+
+    // Лагано појављивање
+    setTimeout(() => {
+        activePanel.style.opacity = '1';
+    }, 100);
+
+    // Активирање таб дугмета
     event.currentTarget.classList.add('active');
 }

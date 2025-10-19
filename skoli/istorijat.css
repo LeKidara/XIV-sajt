@@ -9,6 +9,27 @@
     width: 100%;
     background-color: transparent;
 }
+* {
+
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/ 
+}
+
+body {
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    background-color: #F8F1F1;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Onemogućava horizontalni skrol */
+    width: 100%;
+
+}
+html{
+    overflow-x: hidden; /* Onemogućava horizontalni skrol */
+    width: 100%;
+}
 
 
 

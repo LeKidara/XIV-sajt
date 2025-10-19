@@ -1,18 +1,43 @@
-body {
-    font-family: Arial, sans-serif;
+* {
+
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    /*box-sizing: border-box;*/ 
 }
+
+/* (Uklonjen :root — boje unete direktno po zahtevu)
+   Boje koje koristi sajt: #00509e, #16C79A, #19456B, #003f7f, #F8F1F1, #e2e2e2, #f1f1f1, #ffffff, #333333 */
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0; /* reset margin so footer sticks */
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+    background-color: #F8F1F1;
+    color: #333333;
+    line-height: 1.6;
+    overflow-x: hidden; /* Onemogućava horizontalni skrol */
+    width: 100%;
+    display: flex;
+    flex-direction: column; /* enable sticky footer via margin-top:auto on footer */
+}
+
+
+
 
 .tab-container {
     width: 90%;
     max-width: 900px;
     margin: 40px auto;
-    background: white;
+    background: #ffffff;
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    /* Allow tab-container to grow and push footer down when content is short */
+    flex: 1 0 auto;
 }
 
 .tab-container h1 {
@@ -34,7 +59,7 @@ body {
     padding: 12px 25px;
     cursor: pointer;
     font-size: 1.05em;
-    color: #333;
+    color: #333333;
     transition: all 0.3s ease;
     border-bottom: 3px solid transparent;
 }
@@ -65,4 +90,84 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+ 
+.tab-panel {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.tab-panel.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
+.tab-panel h2 {
+    color: #00509e;
+    margin-bottom: 10px;
+}
+
+.tab-panel p {
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.footer {
+    background-color: #16C79A; /* Tamnoplava pozadina */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: auto; /* pushes footer to bottom when page height > content */
+}
+
+/* Flexbox za kolone u footeru */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Razmak između kolona */
+    flex-wrap: wrap; /* Omogućava prelamanje u novi red na manjim ekranima */
+}
+
+/* Stilovi za svaku kolonu */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Linija ispod sadržaja */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Svetlija linija */
+    margin: 15px 0;
+    width: 80%; /* Linija je malo uža od celog footer-a */
+    margin: 15px auto; /* Centrirana */
+}
+
+/* Tekst ispod linije */
+.footer-rights {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+
+::selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+}
+/* Za WebKit pretraživače (Chrome, Safari) */
+::-moz-selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+    
 }
