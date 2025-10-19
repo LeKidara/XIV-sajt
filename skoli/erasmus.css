@@ -1,0 +1,117 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.erasmus-container {
+    width: 85%;
+    max-width: 900px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #16C79A;
+}
+
+.erasmus-container h1 {
+    text-align: center;
+    color: #00509e;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.erasmus-container h2 {
+    margin-top: 40px;
+    color: #003d7a;
+    border-bottom: 2px solid gray;
+    padding-bottom: 8px;
+    width: fit-content;
+}
+
+.erasmus-container p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    margin-top: 15px;
+    color: #333;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.project-list a {
+    text-decoration: none;
+    color: #00509e;
+    background-color: #f5f9ff;
+    border: 1px solid #cfe0ff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.05em;
+}
+
+.project-list a:hover {
+    background-color: #00509e;
+    color: #ffffff;
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(0, 80, 158, 0.2);
+}
+
+.footer {
+    background-color: #16C79A; /* Tamnoplava pozadina */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: auto; /* pushes footer to bottom when page height > content */
+}
+
+/* Flexbox za kolone u footeru */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Razmak između kolona */
+    flex-wrap: wrap; /* Omogućava prelamanje u novi red na manjim ekranima */
+}
+
+/* Stilovi za svaku kolonu */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Linija ispod sadržaja */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Svetlija linija */
+    margin: 15px 0;
+    width: 80%; /* Linija je malo uža od celog footer-a */
+    margin: 15px auto; /* Centrirana */
+}
+
+/* Tekst ispod linije */
+.footer-rights {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+
+::selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+}
+/* Za WebKit pretraživače (Chrome, Safari) */
+::-moz-selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+    
+}
