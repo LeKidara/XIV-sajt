@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ученици</title>
+    <link rel="stylesheet" href="stil.css">
+</head>
+<body>
+
+    <div class="tab-container">
+        <h1>Ученици</h1>
+
+        <!-- TAB DUGMIĆI -->
+        <div class="tabs">
+            <button class="tab active" onclick="showTab('generacija')">Ученици генерације</button>
+            <button class="tab" onclick="showTab('vandredni')">Ванредни ученици</button>
+            <button class="tab" onclick="showTab('nagradjeni')">Награђивани ученици</button>
+        </div>
+
+        <!-- SADRŽAJ TABOVA -->
+        <div class="tab-content">
+
+            <div id="generacija" class="tab-panel active">
+                <h2>Ученици генерације</h2>
+                <p>Овде можеш уписати текст о ученицима који су проглашени за ученике генерације у последњих неколико година. 
+                На пример: „У школској 2024/25. години, ученик генерације је Милица Јовановић IV3, 
+                која је својим радом, резултатима и понашањем представљала понос школе.“</p>
+            </div>
+
+            <div id="vandredni" class="tab-panel">
+                <h2>Ванредни ученици</h2>
+                <p>У овом одељку можеш приказати информације о ванредним ученицима, уписним роковима и начину полагања испита. 
+                На пример: „Ванредни ученици имају могућност полагања испита у више испитних рокова током године, 
+                уз благовремену пријаву и договор са предметним наставником.“</p>
+            </div>
+
+            <div id="nagradjeni" class="tab-panel">
+                <h2>Награђивани ученици</h2>
+                <p>Овде се могу приказати најзначајнији успеси ученика на такмичењима, конкурсима и пројектима. 
+                На пример: „Ученици XIV београдске гимназије освојили су бројне награде на републичким такмичењима из математике, 
+                физике и српског језика, као и признања на међународним научним и културним манифестацијама.“</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="ucenici.js"></script>
+</body>
+</html>
