@@ -28,7 +28,7 @@ body {
 
 .erasmus-container h2 {
     margin-top: 40px;
-    color: #003f7f;
+    color: #003d7a;
     border-bottom: 2px solid gray;
     padding-bottom: 8px;
     width: fit-content;
@@ -51,7 +51,7 @@ body {
 
 .project-list a {
     text-decoration: none;
-    color: #003f7f;
+    color: #003d7a;
     background-color: #f5f9ff;
     border: 1px solid #cfe0ff;
     padding: 12px 15px;

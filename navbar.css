@@ -63,16 +63,19 @@ body {
     gap: 40px;
     margin-top: 30px;
     transition: all 0.3s ease;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease, color 0.2s ease;
+    will-change: transform, box-shadow;
 }
-
+/* Nav links default: match navbar background so lists look integrated */
 .navbar-menu li a {
     color: white;
     text-decoration: none;
     font-size: 1.3rem;
-    gap:4%;
     padding: 8px 12px;
-    transition: background-color 0.3s;
-    transition: all 0.3s ease;
+    background-color: #16C79A; /* same as .navbar */
+    border-radius: 6px;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease, color 0.2s ease;
+    will-change: transform, box-shadow;
 }
 
 .navbar-menu li a:hover {
@@ -165,17 +168,17 @@ body {
         font-size: 1.3rem;
         gap: 4%;
         padding: 8px 12px;
-        transition: background-color 0.3s;
-        transition: all 0.3s ease;
+        background-color: #16C79A; /* match navbar */
+        border-radius: 6px;
+        transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease, color 0.2s ease;
     }
 
     .navbar-menu li a:hover {
         color: #16C79A;
         background-color: white;
-        border-radius: 4px;
-        font-size: 1.3rem;
-        transition: background-color 0.3s;
-        transition: all 0.3s ease;
+        border-radius: 6px;
+        transform: scale(1.04);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     }
 
 
@@ -187,15 +190,24 @@ body {
         position: relative;
     }
 
+    /* Dropdown is hidden using opacity/visibility so it can animate smoothly */
     .dropdown-content {
-        display: none;
         position: absolute;
+        top: 100%;
+        left: 0;
         background-color: #16C79A;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
         z-index: 1000;
-        border-radius: 5%;
+        border-radius: 6px;
         text-align: center;
-        transition: all 0.3s ease;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px) scale(0.995);
+        transform-origin: top center;
+        transition: opacity 260ms cubic-bezier(.2,.9,.2,1), transform 260ms cubic-bezier(.2,.9,.2,1), visibility 260ms ease;
+        min-width: 160px;
+        overflow: hidden;
     }
 
     .dropdown-content a {
@@ -203,17 +215,24 @@ body {
         padding: 10px;
         color: white;
         text-decoration: none;
-        transition: all 0.3s ease;
+        background-color: transparent; /* inherit dropdown container color (navbar color) */
+        transition: background-color 0.24s ease, color 0.24s ease, transform 0.24s ease, box-shadow 0.24s ease;
+        will-change: transform, box-shadow;
     }
 
     .dropdown-content a:hover {
-        background-color: #003f7f;
-        transition: all 0.3s ease;
+    background-color: #003d7a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+        
     }
 
     .dropdown:hover .dropdown-content {
-        display: block;
-        transition: all 0.3s ease;
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0) scale(1);
+        transition-delay: 40ms; /* tiny delay so the hover feels smooth */
     }
 
 
@@ -312,11 +331,15 @@ body {
         display: block;
         line-height: 1.3;
         border-radius: 6px;
+        background-color: #16C79A; /* match offcanvas/navbar */
+        transition: transform 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
     }
 
     .offcanvas-links a:focus,
     .offcanvas-links a:hover {
         background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.06);
         outline: none;
     }
 
@@ -357,18 +380,23 @@ body {
     }
 
 
-    /* Desktop popover dropdown content (kept consistent) */
+    /* Desktop popover dropdown content (animated) */
     .dropdown-content {
-        position: absolute;
-        background-color: #16C79A;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-        z-index: 1000;
-        border-radius: 5%;
-        text-align: center;
-        transition: all 0.3s ease;
         color: white;
-        border-radius: 3px;
-        transition: background-color 0.2s ease;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #16C79A;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+        z-index: 1000;
+        border-radius: 6px;
+        text-align: center;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-8px) scale(0.995);
+        transform-origin: top center;
+        transition: opacity 260ms cubic-bezier(.2,.9,.2,1), transform 260ms cubic-bezier(.2,.9,.2,1), visibility 260ms ease;
     }
 
     .dropdown-toggle::after {

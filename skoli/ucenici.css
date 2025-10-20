@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
 
 /* (Uklonjen :root — boje unete direktno po zahtevu)
-   Boje koje koristi sajt: #00509e, #16C79A, #19456B, #003f7f, #F8F1F1, #e2e2e2, #f1f1f1, #ffffff, #333333 */
+        Boje koje koristi sajt: #00509e, #16C79A, #19456B, #003d7a, #F8F1F1, #e2e2e2, #f1f1f1, #ffffff, #333333 */
 
 html, body {
     height: 100%;
@@ -72,8 +72,8 @@ body {
 }
 
 .tab.active {
-    border-bottom: 3px solid #003f7f;
-    color: #003f7f;
+    border-bottom: 3px solid #003d7a;
+    color: #003d7a;
     font-weight: bold;
 }
 
@@ -114,7 +114,7 @@ body {
 }
 
 .tab-panel h2 {
-    color: #003f7f;
+    color: #003d7a;
     margin-bottom: 10px;
 }
 
