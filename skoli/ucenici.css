@@ -5,6 +5,8 @@
     /*box-sizing: border-box;*/ 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
+
 /* (Uklonjen :root — boje unete direktno po zahtevu)
    Boje koje koristi sajt: #00509e, #16C79A, #19456B, #003f7f, #F8F1F1, #e2e2e2, #f1f1f1, #ffffff, #333333 */
 
@@ -15,7 +17,7 @@ html, body {
 body {
     margin: 0; /* reset margin so footer sticks */
     margin-top: 50px;
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans', Arial, sans-serif;
     background-color: #F8F1F1;
     color: #333333;
     line-height: 1.6;

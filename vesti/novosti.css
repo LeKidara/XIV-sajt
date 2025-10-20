@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
+
 /* Osnovni stilovi */
 body {
     margin-top: 50px;
-    font-family: Arial, sans-serif;
+    font-family: 'Noto Sans', Arial, sans-serif;
     background-color: #F8F1F1;
     color: #333;
     line-height: 1.6;
