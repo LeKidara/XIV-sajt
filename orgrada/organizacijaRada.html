@@ -1,209 +1,100 @@
 <!DOCTYPE html>
 <html lang="sr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <title>Predmeti XIV</title>
-        <link rel="icon" href="ikonica.png" type="image/png">
-        <link rel="stylesheet" href="organizacijaRada.css"> <!-- Povezivanje sa CSS fajlom -->
-        <link rel="stylesheet" href="navbar.css">
-        
-        
-        
-    </head>
-    <body>
-        <body>
-            
-            <div class="prazan"></div>
-            
-            <h1>Organizacija Rada</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Организација рада | XIV београдска гимназија</title>
 
-            <div class="prazan"></div>
+    <link rel="icon" href="ikonica.png" type="image/png">
+    <link rel="stylesheet" href="organizacijarada.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
 
-            <div class="container">
+    <div class="prazan"></div>
+    <h1>Организација рада</h1>
+    <div class="prazan"></div>
 
-        
-                <!-- Sekcija: Raspored Testova -->
-                <div class="section" id="raspored-testova">
-                    <h2>Raspored Testova</h2>
-                    <div class="test-options">
-                        <!-- Opcija: Prva godina -->
-                        <div class="test-option">
-                            <span>Prva godina ▼</span>
-                            <ul class="Ddropdown">
-                                <li><a href="prva-godina-1.pdf" target="_blank">1/1</a></li>
-                                <li><a href="prva-godina-2.pdf" target="_blank">1/2</a></li>
-                                <li><a href="prva-godina-3.pdf" target="_blank">1/3</a></li>
-                                <li><a href="prva-godina-4.pdf" target="_blank">1/4</a></li>
-                                <li><a href="prva-godina-5.pdf" target="_blank">1/5</a></li>
-                                <li><a href="prva-godina-6.pdf" target="_blank">1/6</a></li>
-                                <li><a href="prva-godina-7.pdf" target="_blank">1/7</a></li>
-                                <li><a href="prva-godina-8.pdf" target="_blank">1/8</a></li>
-                            </ul>
-                        </div>
-        
-                        <!-- Opcija: Druga godina -->
-                        <div class="test-option">
-                            <span>Druga godina ▼</span>
-                            <ul class="Ddropdown">
-                                <li><a href="druga-godina-1.pdf" target="_blank">2/1</a></li>
-                                <li><a href="druga-godina-2.pdf" target="_blank">2/2</a></li>
-                                <li><a href="druga-godina-3.pdf" target="_blank">2/3</a></li>
-                                <li><a href="druga-godina-4.pdf" target="_blank">2/4</a></li>
-                                <li><a href="druga-godina-5.pdf" target="_blank">2/5</a></li>
-                                <li><a href="druga-godina-6.pdf" target="_blank">2/6</a></li>
-                                <li><a href="druga-godina-7.pdf" target="_blank">2/7</a></li>
-                                <li><a href="druga-godina-8.pdf" target="_blank">2/8</a></li>
-                            </ul>
-                        </div>
-        
-                        <!-- Opcija: Treća godina -->
-                        <div class="test-option">
-                            <span>Treća godina ▼</span>
-                            <ul class="Ddropdown">
-                                <li><a href="druga-godina-1.pdf" target="_blank">2/1</a></li>
-                                <li><a href="druga-godina-2.pdf" target="_blank">2/2</a></li>
-                                <li><a href="druga-godina-3.pdf" target="_blank">2/3</a></li>
-                                <li><a href="druga-godina-4.pdf" target="_blank">2/4</a></li>
-                                <li><a href="druga-godina-5.pdf" target="_blank">2/5</a></li>
-                                <li><a href="druga-godina-6.pdf" target="_blank">2/6</a></li>
-                                <li><a href="druga-godina-7.pdf" target="_blank">2/7</a></li>
-                                <li><a href="druga-godina-8.pdf" target="_blank">2/8</a></li>
-                                
-                                
-                            </ul>
-                        </div>
-        
-                        <!-- Opcija: Četvrta godina -->
-                        <div class="test-option">
-                            <span>Četvrta godina ▼</span>
-                            <ul class="Ddropdown">
-                                <li><a href="druga-godina-1.pdf" target="_blank">2/1</a></li>
-                                <li><a href="druga-godina-2.pdf" target="_blank">2/2</a></li>
-                                <li><a href="druga-godina-3.pdf" target="_blank">2/3</a></li>
-                                <li><a href="druga-godina-4.pdf" target="_blank">2/4</a></li>
-                                <li><a href="druga-godina-5.pdf" target="_blank">2/5</a></li>
-                                <li><a href="druga-godina-6.pdf" target="_blank">2/6</a></li>
-                                <li><a href="druga-godina-7.pdf" target="_blank">2/7</a></li>
-                                <li><a href="druga-godina-8.pdf" target="_blank">2/8</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="prazan1"></div>
+    <div class="container">
+
+        <!-- Raspored Testova -->
+        <div class="section">
+    <h2>Распоред тестова</h2>
+
+    <div class="test-grid">
+        <!-- Прва година -->
+        <div class="test-card">
+            <button class="test-header" aria-expanded="false" aria-controls="prva-lista">Прва година ▼</button>
+            <ul id="prva-lista" class="options-list">
+                <li><a href="pdf/prva1.pdf" target="_blank">1/1</a></li>
+                <li><a href="pdf/prva2.pdf" target="_blank">1/2</a></li>
+                <li><a href="pdf/prva3.pdf" target="_blank">1/3</a></li>
+                <li><a href="pdf/prva4.pdf" target="_blank">1/4</a></li>
+                <li><a href="pdf/prva5.pdf" target="_blank">1/5</a></li>
+                <li><a href="pdf/prva6.pdf" target="_blank">1/6</a></li>
+                <li><a href="pdf/prva7.pdf" target="_blank">1/7</a></li>
+                <li><a href="pdf/prva8.pdf" target="_blank">1/8</a></li>
+            </ul>
+        </div>
+
+        <!-- Друга година -->
+        <div class="test-card">
+            <button class="test-header" aria-expanded="false" aria-controls="druga-lista">Друга година ▼</button>
+            <ul id="druga-lista" class="options-list">
+                <li><a href="pdf/druga1.pdf" target="_blank">2/1</a></li>
+                <li><a href="pdf/druga2.pdf" target="_blank">2/2</a></li>
+                <li><a href="pdf/druga3.pdf" target="_blank">2/3</a></li>
+                <li><a href="pdf/druga4.pdf" target="_blank">2/4</a></li>
+                <li><a href="pdf/druga5.pdf" target="_blank">2/5</a></li>
+                <li><a href="pdf/druga6.pdf" target="_blank">2/6</a></li>
+                <li><a href="pdf/druga7.pdf" target="_blank">2/7</a></li>
+                <li><a href="pdf/druga8.pdf" target="_blank">2/8</a></li>
+            </ul>
+        </div>
+
+        <!-- Трећа година -->
+        <div class="test-card">
+            <button class="test-header" aria-expanded="false" aria-controls="treca-lista">Трећа година ▼</button>
+            <ul id="treca-lista" class="options-list">
+                <li><a href="pdf/treca1.pdf" target="_blank">3/1</a></li>
+                <li><a href="pdf/treca2.pdf" target="_blank">3/2</a></li>
+                <li><a href="pdf/treca3.pdf" target="_blank">3/3</a></li>
+                <li><a href="pdf/treca4.pdf" target="_blank">3/4</a></li>
+                <li><a href="pdf/treca5.pdf" target="_blank">3/5</a></li>
+                <li><a href="pdf/treca6.pdf" target="_blank">3/6</a></li>
+                <li><a href="pdf/treca7.pdf" target="_blank">3/7</a></li>
+                <li><a href="pdf/treca8.pdf" target="_blank">3/8</a></li>
+            </ul>
+        </div>
+
+        <!-- Четврта година -->
+        <div class="test-card">
+            <button class="test-header" aria-expanded="false" aria-controls="cetvrta-lista">Четврта година ▼</button>
+            <ul id="cetvrta-lista" class="options-list">
+                <li><a href="pdf/cetvrta1.pdf" target="_blank">4/1</a></li>
+                <li><a href="pdf/cetvrta2.pdf" target="_blank">4/2</a></li>
+                <li><a href="pdf/cetvrta3.pdf" target="_blank">4/3</a></li>
+                <li><a href="pdf/cetvrta4.pdf" target="_blank">4/4</a></li>
+                <li><a href="pdf/cetvrta5.pdf" target="_blank">4/5</a></li>
+                <li><a href="pdf/cetvrta6.pdf" target="_blank">4/6</a></li>
+                <li><a href="pdf/cetvrta7.pdf" target="_blank">4/7</a></li>
+                <li><a href="pdf/cetvrta8.pdf" target="_blank">4/8</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 
 
-            <div class="container">
+        <!-- Ostale sekcije -->
+        <div class="section"><a href="pdf/rasporedCasova.pdf" target="_blank">📅 Распоред часова</a></div>
+        <div class="section"><a href="pdf/rasporedZvonjenja.pdf" target="_blank">🔔 Распоред звоњења</a></div>
+        <div class="section"><a href="pdf/dopunska.pdf" target="_blank">📘 Допунска и додатна настава</a></div>
+        <div class="section"><a href="pdf/otvorenaVrata.pdf" target="_blank">🚪 Отворена врата</a></div>
+        <div class="section"><a href="pdf/kalendar.pdf" target="_blank">🗓️ Календар рада</a></div>
+        <div class="section"><a href="pdf/kucniRed.pdf" target="_blank">🏫 Кућни ред школе</a></div>
+    </div>
 
-        
-                <!-- Sekcija: Raspored Testova -->
-                <div class="section" id="raspored-testova">
-                    <h2>Raspored Testova</h2>
-                    <div class="test-options">
-                        <!-- Opcija: Prva godina -->
-                        <div class="test-option">
-                            <a class="span" href="druga-godina-1.pdf" target="_blank">po odeljenjima</a>
-                            
-                        </div>
-        
-                        <!-- Opcija: Druga godina -->
-                        <div class="test-option">
-                            <a class="span" href="druga-godina-1.pdf" target="_blank">po nastavnicima</a>
-                            
-                        </div>
-        
-                        
-                        
-                    </div>
-                </div>
-            </div>
-
-
-            
-            <div class="prazan1"></div>
-
-            <div class="container">
-
-        
-                <!-- Sekcija: Raspored Testova -->
-                <div class="section" id="raspored-testova">
-                    <a class="h2" href="prva-godina-1.pdf" target="_blank">Raspored Zvonjenja</a>
-                </div>
-            </div>
-            <div class="prazan1"></div>
-
-            
-
-            <div class="container">
-
-        
-                <!-- Sekcija: Raspored Testova -->
-                <div class="section" id="raspored-testova">
-                    <a class="h2" href="prva-godina-1.pdf" target="_blank">Raspored Dopunskih i Dodatnih programa</a>
-                </div>
-            </div>
-            <div class="prazan1"></div>
-
-            <div class="container">
-
-        
-                <!-- Sekcija: Raspored Testova -->
-                <div class="section" id="raspored-testova" >
-                    <a class="h2" href="prva-godina-1.pdf" target="_blank">raspored otvorenih vrata</a>
-                </div>
-            </div>
-
-            <div class="prazan1"></div>
-
-            <div class="container">
-
-        
-                <!-- Sekcija: Raspored Testova -->
-                <div class="section" id="raspored-testova">
-                    <a class="h2" href="prva-godina-1.pdf" target="_blank">Kalendar Rada</a>
-                </div>
-            </div>
-
-
-            
-
-            <div class="prazan1"></div>
-
-            <div class="container">
-
-        
-                <!-- Sekcija: Raspored Testova -->
-                <div class="section" id="raspored-testova" >
-                    <a class="h2" href="prva-godina-1.pdf" target="_blank">Kucni red skole</a>
-                </div>
-            </div>
-
-
-    
-
-
-            <script src="script.js">
-                // Funkcija za rukovanje hover efektom
-                document.querySelectorAll('.test-option').forEach(option => {
-                option.addEventListener('mouseenter', () => {
-                const dropdown = option.querySelector('.dropdown');
-                dropdown.style.display = 'block'; // Prikazuje dropdown
-                });
-                option.addEventListener('mouseleave', () => {
-                const dropdown = option.querySelector('.dropdown');
-                dropdown.style.display = 'none'; // Sakriva dropdown
-                });
-                });
-
-            </script>
-
-
-    </body>
-
-
-
-
+    <script src="organizacijaRada.js"></script>
+</body>
 </html>

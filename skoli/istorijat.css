@@ -41,6 +41,7 @@ html{
     background-color: white;    
     border-radius: 8px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    
 }
 .h1 {
     text-align: center;
@@ -92,6 +93,7 @@ ul {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     border-radius: 8px;
     overflow: hidden;
+    border-left: 5px solid #16C79A;
 }
 .about-sadrzaj{
     margin-top: 20px;

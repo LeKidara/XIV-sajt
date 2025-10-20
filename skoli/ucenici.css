@@ -38,6 +38,7 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     /* Allow tab-container to grow and push footer down when content is short */
     flex: 1 0 auto;
+    border-left: 5px solid #16C79A;
 }
 
 .tab-container h1 {
@@ -69,8 +70,8 @@ body {
 }
 
 .tab.active {
-    border-bottom: 3px solid #00509e;
-    color: #00509e;
+    border-bottom: 3px solid #003f7f;
+    color: #003f7f;
     font-weight: bold;
 }
 
@@ -111,7 +112,7 @@ body {
 }
 
 .tab-panel h2 {
-    color: #00509e;
+    color: #003f7f;
     margin-bottom: 10px;
 }
 
