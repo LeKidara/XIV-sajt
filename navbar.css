@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
 body {
     font-family: 'Noto Sans', Arial, sans-serif;
 }
@@ -78,338 +78,530 @@ body {
 .navbar-menu li a:hover {
    
     color: #16C79A;
-    background-color: white;
-    border-radius: 4px;
-    font-size: 1.3rem;
-    transition: background-color 0.3s;
-    transition: all 0.3s ease;
-}
-/*padajuci meni u navbaru*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.dropdown-content {
-    display: none; /* Sakriveno po default-u */
-    position: absolute; /* Apsolutno pozicioniranje */
-    background-color: #16C79A; /* Boja pozadine padajućeg menija */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    border-radius: 5%;
-    text-align: center;
-    transition: all 0.3s ease;
 
 }
 
-.dropdown-content a {
-    display: block; /* Stavke u padajućem meniju su blokovi */
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
+    /* --------------------------------------------------------------------------- */
+    /* Base / font                                                                     */
+    /* --------------------------------------------------------------------------- */
 
-.dropdown-content a:hover {
-    background-color: #003f7f; /* Boja na hover */
-    transition: all 0.3s ease;
-}
-
-/* Prikazivanje padajućeg menija na hover */
-.dropdown:hover .dropdown-content {
-    display: block; /* Prikazivanje na hover */
-    transition: all 0.3s ease;
-}
-
-
-
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-/* Desktop navbar - Prikazuje se samo na većim ekranima */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger .line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-}
-
-/* Offcanvas meni */
-.offcanvas {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Meni je inicijalno skriven sa desne strane */
-    width: 250px;
-    height: 100%;
-    background-color: #16C79A;
-    transition: right 0.3s ease;
-    visibility: visible; /* Pobrinite se da je meni vidljiv */
-    z-index: 9999; /* Visoki z-index da bi meni bio iznad drugih elemenata */
-    opacity: 1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Dugme za zatvaranje menija */
-.exit-btn {
-    background-color: #16C79A;
-    color: white;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px 15px;
-    /*border-radius: 5px;*/
-}
-
-/* Linkovi unutar offcanvas menija */
-.offcanvas-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 50px;
-}
-
-.offcanvas-links li {
-    margin: 20px 0;
-    text-align: center;
-    list-style: none;
-}
-
-.offcanvas-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-/* Responsive dizajn za mobilne uređaje */
-
-.dropdown-menu1 {
-    display: none; /* Skriven podmeni */
-    list-style: none;
-    padding-left: 20px;
-    font-size: 0.8;
-    border: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Blaga senka */
-
-}
-.dropdown-content {
-
-    position: absolute; /* Apsolutno pozicioniranje */
-    background-color: #16C79A; /* Boja pozadine padajućeg menija */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    border-radius: 5%;
-    text-align: center;
-    transition: all 0.3s ease;
-    color:white;
-    border-radius: 3px;
-    transition: background-color 0.2s ease;
-
-}
-.dropdown-toggle::after {
-    content: '▼';
-    font-size: 12px;
-    position: absolute;
-    right: 15px;
-    transition: transform 0.3s ease;
-}
-.dropdown-toggle.active::after {
-    transform: rotate(180deg);
-}
-.hRed{
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 615px){
-    
-    .navbar-logo {
-        width: 60px;
-        height: 60px;
-        margin-right: 0px;
-    }
-    
-    .navbar-title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-left: 10px;
-        color: white;
+    body {
+        font-family: 'Noto Sans', Arial, sans-serif;
     }
 
-}
 
+    /* --------------------------------------------------------------------------- */
+    /* Navbar - layout and primary styles                                             */
+    /* --------------------------------------------------------------------------- */
 
-@media (max-width: 1100px) {
-    .navbar-center {
-        display: none;
-    }
-
-    .hamburger {
-        display: flex;
-    }
-    
-}
-
-@media (max-width: 1370px){
-    .navbar-menu {
-
-        gap: 10px;
-
-    }
-    .navbar-menu li a {
-
-        font-size: 1.1rem;
-
-    }
-    .navbar-menu li a:hover {
-
-        font-size: 1.1rem;
-
-    }
-    .navbar-logo {
-        width: 55px;
-        height: 55px;
-        margin-right: 0px;
-    }
-    
-    .navbar-title {
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin-left: 10px;
-        color: white;
-    }
-
-}
-
-/* Extra small-screen tweaks */
-@media (max-width: 768px) {
     .navbar {
-        padding: 8px 10px;
-    }
-    .navbar-menu { gap: 8px; }
-    .navbar-menu li a { font-size: 1rem; padding: 6px 8px; }
-    .navbar-title { font-size: 1.05rem; }
-    .hamburger { display: flex !important; }
-    /* Ensure offcanvas covers the screen nicely */
-    .offcanvas { width: 100%; right: -100%; }
-}
-
-/* Moved small-screen navbar overrides from nastava/predmeti.css */
-@media (max-width: 615px){
-    .navbar-logo { width: 60px; height: 60px; margin-right: 0px; }
-    .navbar-title { font-size: 1.2rem; font-weight: bold; margin-left: 10px; color: white; }
-}
-
-@media (max-width: 990px) {
-    .navbar-center { display: none; }
-    .hamburger { display: flex; }
-}
-
-@media (max-width: 1250px){
-    .navbar-menu { gap: 10px; }
-    .navbar-menu li a { font-size: 1.1rem; }
-    .navbar-logo { width: 55px; height: 55px; margin-right: 0px; }
-    .navbar-title { font-size: 1.4rem; font-weight: bold; margin-left: 10px; color: white; }
-}
-
-/* Moved small-screen navbar overrides from nastava/udzbenici.css */
-@media (max-width: 615px){
-    .navbar-logo { width: 60px; height: 60px; margin-right: 0px; }
-    .navbar-title { font-size: 1.2rem; font-weight: bold; margin-left: 10px; color: white; }
-}
-@media (max-width: 990px) { .navbar-center { display: none; } .hamburger { display: flex; } }
-
-/* Moved small-screen navbar overrides from skoli/istorijat.css and skoli/zaposleni.css */
-@media (max-width: 615px){
-    .navbar-logo { width: 60px; height: 60px; }
-    .navbar-title { font-size: 1.2rem; }
-}
-
-
-/* -----------------------------------------------------------------------------
-   Navbar overrides moved from other CSS files to centralize navbar styles.
-   These came from `vesti/novosti.css` (small-screen tweaks).
-   Kept here to preserve per-page small-screen behavior.
-   Date: 2025-10-20
-   -------------------------------------------------------------------------- */
-
-@media (max-width: 990px) {
-    /* moved from vesti/novosti.css */
-    .navbar-center { display: none; }
-    .hamburger { display: flex; }
-    .carousel {
-        position: relative;
-        width: 80%;
-        /*max-width: 10000px;*/
-        height: 400px;
-        margin: 0 auto;
-        overflow: hidden;
-    }
-    .about-section {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #16C79A;
+        color: white;
+        padding: 10px 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         display: flex;
         align-items: center;
-        width: 97%;
-        height: auto;
-        margin: 50px auto;
-        padding: 20px;
-        background-color: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-        border-radius: 8px;
+        justify-content: space-between;
+        z-index: 1000;
+        transition: all 0.3s ease;
+    }
+
+
+    /* --------------------------------------------------------------------------- */
+    /* Left section                                                                  */
+    /* --------------------------------------------------------------------------- */
+
+    .navbar-left {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .navbar-logo {
+        width: 80px;
+        height: 80px;
+        margin-right: 0px;
+    }
+
+    .navbar-title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-left: 10px;
+        color: white;
+    }
+
+
+    /* --------------------------------------------------------------------------- */
+    /* Center / menu                                                                 */
+    /* --------------------------------------------------------------------------- */
+
+    .navbar-center {
+        flex-grow: 1;
+        display: flex;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-menu {
+        list-style: none;
+        display: flex;
+        gap: 40px;
+        margin-top: 30px;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.3rem;
+        gap: 4%;
+        padding: 8px 12px;
+        transition: background-color 0.3s;
+        transition: all 0.3s ease;
+    }
+
+    .navbar-menu li a:hover {
+        color: #16C79A;
+        background-color: white;
+        border-radius: 4px;
+        font-size: 1.3rem;
+        transition: background-color 0.3s;
+        transition: all 0.3s ease;
+    }
+
+
+    /* --------------------------------------------------------------------------- */
+    /* Desktop dropdown (absolute popover)                                           */
+    /* --------------------------------------------------------------------------- */
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #16C79A;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        border-radius: 5%;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-content a {
+        display: block;
+        padding: 10px;
+        color: white;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #003f7f;
+        transition: all 0.3s ease;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        transition: all 0.3s ease;
+    }
+
+
+    /* helper */
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+
+    /* --------------------------------------------------------------------------- */
+    /* Hamburger (hidden on desktop, used on small screens)                          */
+    /* --------------------------------------------------------------------------- */
+
+    .hamburger {
+        display: none;
+        flex-direction: column;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        margin: 6px 0;
+    }
+
+
+    /* --------------------------------------------------------------------------- */
+    /* Offcanvas (mobile)                                                            */
+    /* Use transform for smooth, GPU-accelerated animation                            */
+    /* --------------------------------------------------------------------------- */
+
+    .offcanvas {
+        position: fixed;
+        top: 0;
+        right: 0;
+        transform: translateX(100%); /* hidden by default */
+        width: 320px;
+        max-width: 90vw;
+        height: 100%;
+        background-color: #16C79A;
+        transition: transform 260ms cubic-bezier(.2,.9,.2,1);
+        will-change: transform;
+        visibility: visible;
+        z-index: 9999;
+        opacity: 1;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .exit-btn {
+        background-color: #16C79A;
+        color: white;
+        border: none;
+        font-size: 30px;
+        cursor: pointer;
+        padding: 10px 15px;
+    }
+
+    .offcanvas.open {
+        transform: translateX(0);
+    }
+
+    @media (max-width: 768px) {
+        .offcanvas {
+            width: 100%;
+            max-width: 100vw;
+        }
+    }
+
+
+    /* --------------------------------------------------------------------------- */
+    /* Offcanvas links                                                                 */
+    /* --------------------------------------------------------------------------- */
+
+    .offcanvas-links {
+        list-style: none;
+        padding: 0;
+        margin-top: 50px;
+    }
+
+    .offcanvas-links li {
+        margin: 20px 0;
+        text-align: center;
+        list-style: none;
+    }
+
+    .offcanvas-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 14px 18px;
+        display: block;
+        line-height: 1.3;
+        border-radius: 6px;
+    }
+
+    .offcanvas-links a:focus,
+    .offcanvas-links a:hover {
+        background: rgba(255, 255, 255, 0.08);
+        outline: none;
+    }
+
+
+    /* --------------------------------------------------------------------------- */
+    /* Collapsible submenus inside the offcanvas (mobile)                            */
+    /* Use max-height to animate open/close. Do NOT use display:none for animation.  */
+    /* --------------------------------------------------------------------------- */
+
+    .dropdown-menu1 {
+        list-style: none;
+        padding-left: 20px;
+        font-size: 0.9rem;
+        border: none;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.03);
+        margin: 0;
+    }
+
+    .dropdown-menu1 {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 280ms ease;
+    }
+
+    .offcanvas .dropdown-toggle + .dropdown-menu1,
+    .offcanvas .dropdown-menu1 {
+        display: block;
+    }
+
+    .offcanvas .dropdown-toggle {
+        cursor: pointer;
+        padding: 12px 18px;
+        display: block;
+    }
+
+    .offcanvas .dropdown-toggle.active + .dropdown-menu1 {
+        max-height: 600px;
+    }
+
+
+    /* Desktop popover dropdown content (kept consistent) */
+    .dropdown-content {
+        position: absolute;
+        background-color: #16C79A;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+        z-index: 1000;
+        border-radius: 5%;
+        text-align: center;
+        transition: all 0.3s ease;
+        color: white;
+        border-radius: 3px;
+        transition: background-color 0.2s ease;
+    }
+
+    .dropdown-toggle::after {
+        content: '▼';
+        font-size: 12px;
+        position: absolute;
+        right: 15px;
+        transition: transform 0.3s ease;
+    }
+
+    .dropdown-toggle.active::after {
+        transform: rotate(180deg);
+    }
+
+    .hRed {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+
+    /* --------------------------------------------------------------------------- */
+    /* Responsive tweaks and breakpoints                                             */
+    /* --------------------------------------------------------------------------- */
+
+    @media (max-width: 615px) {
+        .navbar-logo {
+            width: 60px;
+            height: 60px;
+            margin-right: 0px;
+        }
+
+        .navbar-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-left: 10px;
+            color: white;
+        }
+    }
+
+    @media (max-width: 1100px) {
+        .navbar-center {
+            display: none;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+    }
+
+    @media (max-width: 1370px) {
+        .navbar-menu {
+            gap: 10px;
+        }
+
+        .navbar-menu li a {
+            font-size: 1.1rem;
+        }
+
+        .navbar-menu li a:hover {
+            font-size: 1.1rem;
+        }
+
+        .navbar-logo {
+            width: 55px;
+            height: 55px;
+            margin-right: 0px;
+        }
+
+        .navbar-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-left: 10px;
+            color: white;
+        }
+    }
+
+    @media (max-width: 990px) {
+        .navbar-center {
+            display: none;
+        }
+
+        .hamburger {
+            display: flex;
+        }
+
+        .carousel {
+            position: relative;
+            width: 80%;
+            height: 400px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            width: 97%;
+            height: auto;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: auto;
+            height: 400px;
+            border-radius: 30%;
+        }
+
+        .about-text p {
+            font-size: 0.8rem;
+            color: #333;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 1250px) {
+        .navbar-menu {
+            gap: 10px;
+        }
+
+        .navbar-menu li a {
+            font-size: 1.1rem;
+        }
+
+        .navbar-logo {
+            width: 55px;
+            height: 55px;
+            margin-right: 0px;
+        }
+
+        .navbar-title {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-left: 10px;
+            color: white;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            padding: 8px 12px;
+        }
+
+        .navbar-menu {
+            gap: 8px;
+        }
+
+        .navbar-menu li a {
+            font-size: 1rem;
+            padding: 6px 8px;
+        }
+
+        .navbar-title {
+            font-size: 1.05rem;
+        }
+
+        .hamburger {
+            display: flex !important;
+        }
+
+        .offcanvas {
+            width: 100%;
+            transform: translateX(100%);
+        }
+
+        /* Keep only the logo visible on small screens so it doesn't get clipped.
+           Hide the textual title and prevent overflow/clipping of the logo. */
+        .navbar-title {
+            display: none !important;
+            visibility: hidden !important;
+            height: 0 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            line-height: 0 !important;
+            font-size: 0 !important;
+        }
+
+        .navbar {
+            overflow: visible !important; /* ensure logo isn't clipped */
+        }
+
+        .navbar-brand {
+            gap: 0 !important; /* reduce extra gap so logo fits */
+        }
+
+        .navbar-logo {
+            width: 56px !important;
+            height: 56px !important;
+            max-width: 90%;
+            display: block !important;
+            object-fit: contain;
+        }
+    }
+
+    /* Hamburger animation when active */
+    .hamburger.active .line:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .line:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Accessibility and focus styles */
+    .hamburger,
+    .hamburger button {
+        background: transparent;
+        border: 0;
+        padding: 8px;
+    }
+
+    .hamburger:focus,
+    .exit-btn:focus,
+    .offcanvas-links a:focus {
+        outline: 3px solid rgba(255, 255, 255, 0.18);
+        outline-offset: 2px;
+    }
+
+    /* Body lock when menu open */
+    body.menu-open {
         overflow: hidden;
     }
-    .about-image img { width: auto; height: 400px; border-radius: 30%; }
-    .about-text p { font-size: 0.8rem; color: #333; line-height: 1.6; margin-bottom: 10px; }
-}
 
-@media (max-width: 1250px){
-    /* moved from vesti/novosti.css */
-    .navbar-menu { gap: 10px; }
-    .navbar-menu li a { font-size: 1.1rem; }
-    .navbar-logo { width: 55px; height: 55px; margin-right: 0px; }
-    .navbar-title { font-size: 1.4rem; font-weight: bold; margin-left: 10px; color: white; }
-}
-
-/* Moved small-screen navbar overrides from stil.css */
-@media (max-width: 1250px){
-    .navbar-menu { gap: 10px; }
-    .navbar-menu li a { font-size: 1.1rem; }
-    .navbar-logo { width: 55px; height: 55px; margin-right: 0px; }
-    .navbar-title { font-size: 1.4rem; font-weight: bold; margin-left: 10px; color: white; }
-}
-
-@media (max-width: 768px) {
-    /* moved from stil.css to centralize behavior */
-    .navbar { padding: 8px 12px; }
-    .navbar-logo { width: 50px; height: 50px; }
-    .navbar-title { font-size: 1.1rem; }
-    .navbar-menu { display: none !important; }
-    .hamburger { display: flex !important; }
-}
+    @media (max-width: 1110px) {
+        .navbar-menu {
+            display: none !important;
+        }
+    }

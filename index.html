@@ -18,7 +18,6 @@
 
 
 <body>
-    <body>
         
         <!-- Desktop Navbar -->
         <nav class="navbar desktop-navbar">
@@ -92,12 +91,12 @@
                     <a href="#" class="dropdown-toggle">O Skoli</a>
                     <!-- Podmeni -->
                     <ul class="dropdown-menu1">
-                        <li class="dropdown-content1"></li><a href="skoli/istorijat.html">Историјат</a></li>
-                        <li class="dropdown-content1"></li><a href="skoli/ucenik.html">Ученик</a></li>
-                        <li class="dropdown-content1"></li><a href="skoli/zaposleni.html">Запослени</a></li>
-                        <li class="dropdown-content1"></li><a href="skoli/upis.html">Упис</a> </li>
-                        <li class="dropdown-content1"></li><a href="skoli/javneNabavke.html">Јавне набавке</a></li>
-                        <li class="dropdown-content1"></li><a href="skoli/erasmus.html">Erasmus</a></li>
+                        <li class="dropdown-content1"><a href="skoli/istorijat.html">Историјат</a></li>
+                        <li class="dropdown-content1"><a href="skoli/ucenik.html">Ученик</a></li>
+                        <li class="dropdown-content1"><a href="skoli/zaposleni.html">Запослени</a></li>
+                        <li class="dropdown-content1"><a href="skoli/upis.html">Упис</a></li>
+                        <li class="dropdown-content1"><a href="skoli/javneNabavke.html">Јавне набавке</a></li>
+                        <li class="dropdown-content1"><a href="skoli/erasmus.html">Erasmus</a></li>
                     </ul>
             </li>
 
@@ -105,20 +104,20 @@
                 <a href="#" class="dropdown-toggle">Вестi</a>
                 <!-- Podmeni -->
                 <ul class="dropdown-menu1">
-                    <li class="dropdown-content1"></li><a href="vesti/novosti.html">Новости</a></li>
-                    <li class="dropdown-content1"></li><a href="vesti/Casopis.html">Школски часопис</a></li>
-                    <li class="dropdown-content1"></li><a href="vesti/arhiv.html">Aрхив</a></li>
+                    <li class="dropdown-content1"><a href="vesti/novosti.html">Новости</a></li>
+                    <li class="dropdown-content1"><a href="vesti/Casopis.html">Школски часопис</a></li>
+                    <li class="dropdown-content1"><a href="vesti/arhiv.html">Aрхив</a></li>
                 </ul>
             </li>
 
             <li>
                 <a href="#" class="dropdown-toggle">Nastava</a>
                     <!-- Podmeni -->
-                <ul class="dropdown-menu1">
-                   <li class="dropdown-content1"></li><a href="nastava/predmeti.html">Предмети</a></li>
-                   <li class="dropdown-content1"></li><a href="nastava/udzbenici.html">Уџбеници</a></li>
-                   <li class="dropdown-content1"></li><a href="nastava/IzPred.html">Изборни предмети</a></li>
-                </ul>
+                     <ul class="dropdown-menu1">
+                         <li class="dropdown-content1"><a href="nastava/predmeti.html">Предмети</a></li>
+                         <li class="dropdown-content1"><a href="nastava/udzbenici.html">Уџбеници</a></li>
+                         <li class="dropdown-content1"><a href="nastava/IzPred.html">Изборни предмети</a></li>
+                     </ul>
             </li>
             <li>
                 <a href="#" class="dropdown-toggle">Активонсти</a>
@@ -130,7 +129,7 @@
                 </ul>
             </li>
             <li>
-                <a href="orgrada/organizacijaRada">Organizacija rada</a>
+                <a href="orgrada/organizacijaRada.html">Organizacija rada</a>
 
             </li>
         </ul>
@@ -235,82 +234,38 @@
 </body>
 
 <script>
-    //kod za ringispil
+    // Carousel (ringispil)
     let currentIndex = 0;
     const slides = document.querySelectorAll(".carousel-image");
     const slideInterval = 25000; // 25 sekundi
-    
-    // Funkcija za prikaz sledećeg slajda
+
     function showSlide(index) {
+        if (!slides || slides.length === 0) return;
         slides.forEach((slide, i) => {
             slide.classList.toggle("active", i === index);
         });
     }
-    
-    // Sledeći slajd
+
     function nextSlide() {
+        if (!slides || slides.length === 0) return;
         currentIndex = (currentIndex + 1) % slides.length;
         showSlide(currentIndex);
     }
-    
-    // Prethodni slajd
+
     function prevSlide() {
+        if (!slides || slides.length === 0) return;
         currentIndex = (currentIndex - 1 + slides.length) % slides.length;
         showSlide(currentIndex);
     }
-    
-    // Automatsko menjanje slika svakih 25 sekundi
-   
 
-
-   // Dobavljanje referenci na elemente
-    const hamburger = document.getElementById('hamburger');
-    const offcanvas = document.getElementById('offcanvas');
-    const exitBtn = document.getElementById('exit-btn');
-    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
-
-    // Funkcija za otvaranje offcanvas menija
-    hamburger.addEventListener('click', () => {
-        offcanvas.style.right = '0';
-    });
-
-    // Funkcija za zatvaranje offcanvas menija
-    exitBtn.addEventListener('click', () => {
-        offcanvas.style.right = '-250px';
-    });
-
-    // Dodaj događaj za otvaranje/zatvaranje podmenija
-    dropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', (e) => {
-            e.preventDefault(); // Sprečava default ponašanje linka
-
-            const dropdownMenu = toggle.nextElementSibling; // Pronalazi odgovarajući podmeni
-
-            // Zatvara sve otvorene podmenije i uklanja klasu 'active' sa svih strelica
-            document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                if (menu !== dropdownMenu) {
-                    menu.style.display = 'none';
-                }
-            });
-            document.querySelectorAll('.dropdown-toggle').forEach(item => {
-                if (item !== toggle) {
-                    item.classList.remove('active');
-                }
-            });
-
-            // Prikazuje ili sakriva podmeni i rotira strelicu
-            if (dropdownMenu.style.display === 'block') {
-                dropdownMenu.style.display = 'none';
-                toggle.classList.remove('active');
-            } else {
-                dropdownMenu.style.display = 'block';
-                toggle.classList.add('active');
-            }
-        });
-    });
-
-
+    // Automatsko menjanje slika
+    if (slides && slides.length > 1) {
+        setInterval(nextSlide, slideInterval);
+    }
 </script>
+
+<!-- external script handles navbar/offcanvas and dropdown interactions -->
+<script src="script.js"></script>
 
 </html>
 

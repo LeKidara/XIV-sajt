@@ -513,9 +513,7 @@ html{
 
     /* Responsive images and media */
     img, .about-image img, .about-image1 img {
-        max-width: 100%;
-        height: auto;
-        display: block;
+        display: none;
     }
 
     /* Reduce typography for small screens */
