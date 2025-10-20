@@ -1,63 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
-
 body {
-    font-family: 'Noto Sans', Arial, sans-serif;
-    background-color: #fffdf8;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f8ff;
     margin: 0;
     padding: 0;
-    line-height: 1.7;
-    color: #222;
+    color: #333;
 }
 
-.upis-container {
-    width: 90%;
-    max-width: 800px;
-    background-color: #ffffff;
+.parlament-container {
+    width: 85%;
+    max-width: 950px;
+    background: #ffffff;
     margin: 60px auto;
     padding: 40px 50px;
     border-radius: 12px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #16C79A;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #16C79A;
 }
 
-.upis-container h1 {
-    color: #000;
-    font-size: 1.9em;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    border-bottom: 2px solid gray;
-    padding-bottom: 8px;
+.parlament-container h1 {
+    text-align: center;
+    color: #00509e;
+    font-size: 2em;
+    margin-bottom: 30px;
 }
 
-.upis-container .uvod {
+.parlament-image {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.parlament-image img {
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.parlament-text p {
+    font-size: 1.05em;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.parlament-text strong {
+    color: #00509e;
+}
+
+.napomena {
     font-style: italic;
-    background-color: lightgray;
-    border-left: 4px solid gray;
-    padding: 12px 15px;
-    border-radius: 6px;
     color: #444;
+    background: #f5f9ff;
+    padding: 10px 15px;
+    border-left: 4px solid gray;
+    border-radius: 6px;
 }
-
-.upis-container ul {
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-.upis-container li {
-    margin: 6px 0;
-}
-
-.upis-container a {
-    color: #003f7f;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.upis-container a:hover {
-    text-decoration: underline;
-}
-
 
 
 .footer {
@@ -109,4 +105,14 @@ body {
     background-color: #16C79A; /* Boja pozadine kada se selektuje */
     color: white; /* Boja teksta kada se selektuje */
     
+}
+@media (max-width: 700px) {
+    .parlament-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .parlament-text p {
+        font-size: 1em;
+    }
 }

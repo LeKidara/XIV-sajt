@@ -210,3 +210,55 @@ h1 {
     padding: 10px 0;
     border-top: 1px solid #ddd;
 }
+
+
+.footer {
+    background-color: #16C79A; /* Tamnoplava pozadina */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: auto; /* pushes footer to bottom when page height > content */
+}
+
+/* Flexbox za kolone u footeru */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Razmak između kolona */
+    flex-wrap: wrap; /* Omogućava prelamanje u novi red na manjim ekranima */
+}
+
+/* Stilovi za svaku kolonu */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Linija ispod sadržaja */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Svetlija linija */
+    margin: 15px 0;
+    width: 80%; /* Linija je malo uža od celog footer-a */
+    margin: 15px auto; /* Centrirana */
+}
+
+/* Tekst ispod linije */
+.footer-rights {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+
+::selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+}
+/* Za WebKit pretraživače (Chrome, Safari) */
+::-moz-selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+    
+}

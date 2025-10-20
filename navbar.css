@@ -308,3 +308,108 @@ body {
     }
 
 }
+
+/* Extra small-screen tweaks */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 10px;
+    }
+    .navbar-menu { gap: 8px; }
+    .navbar-menu li a { font-size: 1rem; padding: 6px 8px; }
+    .navbar-title { font-size: 1.05rem; }
+    .hamburger { display: flex !important; }
+    /* Ensure offcanvas covers the screen nicely */
+    .offcanvas { width: 100%; right: -100%; }
+}
+
+/* Moved small-screen navbar overrides from nastava/predmeti.css */
+@media (max-width: 615px){
+    .navbar-logo { width: 60px; height: 60px; margin-right: 0px; }
+    .navbar-title { font-size: 1.2rem; font-weight: bold; margin-left: 10px; color: white; }
+}
+
+@media (max-width: 990px) {
+    .navbar-center { display: none; }
+    .hamburger { display: flex; }
+}
+
+@media (max-width: 1250px){
+    .navbar-menu { gap: 10px; }
+    .navbar-menu li a { font-size: 1.1rem; }
+    .navbar-logo { width: 55px; height: 55px; margin-right: 0px; }
+    .navbar-title { font-size: 1.4rem; font-weight: bold; margin-left: 10px; color: white; }
+}
+
+/* Moved small-screen navbar overrides from nastava/udzbenici.css */
+@media (max-width: 615px){
+    .navbar-logo { width: 60px; height: 60px; margin-right: 0px; }
+    .navbar-title { font-size: 1.2rem; font-weight: bold; margin-left: 10px; color: white; }
+}
+@media (max-width: 990px) { .navbar-center { display: none; } .hamburger { display: flex; } }
+
+/* Moved small-screen navbar overrides from skoli/istorijat.css and skoli/zaposleni.css */
+@media (max-width: 615px){
+    .navbar-logo { width: 60px; height: 60px; }
+    .navbar-title { font-size: 1.2rem; }
+}
+
+
+/* -----------------------------------------------------------------------------
+   Navbar overrides moved from other CSS files to centralize navbar styles.
+   These came from `vesti/novosti.css` (small-screen tweaks).
+   Kept here to preserve per-page small-screen behavior.
+   Date: 2025-10-20
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 990px) {
+    /* moved from vesti/novosti.css */
+    .navbar-center { display: none; }
+    .hamburger { display: flex; }
+    .carousel {
+        position: relative;
+        width: 80%;
+        /*max-width: 10000px;*/
+        height: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .about-section {
+        display: flex;
+        align-items: center;
+        width: 97%;
+        height: auto;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .about-image img { width: auto; height: 400px; border-radius: 30%; }
+    .about-text p { font-size: 0.8rem; color: #333; line-height: 1.6; margin-bottom: 10px; }
+}
+
+@media (max-width: 1250px){
+    /* moved from vesti/novosti.css */
+    .navbar-menu { gap: 10px; }
+    .navbar-menu li a { font-size: 1.1rem; }
+    .navbar-logo { width: 55px; height: 55px; margin-right: 0px; }
+    .navbar-title { font-size: 1.4rem; font-weight: bold; margin-left: 10px; color: white; }
+}
+
+/* Moved small-screen navbar overrides from stil.css */
+@media (max-width: 1250px){
+    .navbar-menu { gap: 10px; }
+    .navbar-menu li a { font-size: 1.1rem; }
+    .navbar-logo { width: 55px; height: 55px; margin-right: 0px; }
+    .navbar-title { font-size: 1.4rem; font-weight: bold; margin-left: 10px; color: white; }
+}
+
+@media (max-width: 768px) {
+    /* moved from stil.css to centralize behavior */
+    .navbar { padding: 8px 12px; }
+    .navbar-logo { width: 50px; height: 50px; }
+    .navbar-title { font-size: 1.1rem; }
+    .navbar-menu { display: none !important; }
+    .hamburger { display: flex !important; }
+}

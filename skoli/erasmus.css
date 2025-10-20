@@ -117,3 +117,13 @@ body {
     color: white; /* Boja teksta kada se selektuje */
     
 }
+@media (max-width: 600px) {
+    .erasmus-container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .erasmus-container h1 {
+        font-size: 1.5em;
+    }
+}

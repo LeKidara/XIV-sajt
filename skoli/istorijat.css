@@ -230,19 +230,7 @@ ul {
 }
 
 @media (max-width: 615px){
-    
-    .navbar-logo {
-        width: 60px;
-        height: 60px;
-        margin-right: 0px;
-    }
-    
-    .navbar-title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        margin-left: 10px;
-        color: white;
-    }
+    /* Navbar small-screen tweaks moved to `navbar.css` */
     /*.about-image img {
         width: 0;
         height: 0px;

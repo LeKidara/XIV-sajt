@@ -10,6 +10,8 @@
 
 body {
     margin-top: 50px;
+    /* Navbar styles moved to `navbar.css` to avoid duplication. Any page-specific navbar tweaks should be added there or kept here if truly page-specific. */
+
     font-family: 'Noto Sans', Arial, sans-serif;
     background-color: #F8F1F1;
     color: #333;
@@ -23,223 +25,7 @@ html{
     width: 100%;
 }
 
-/*navbar*/
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #16C79A;
-    color: white;
-    padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 1000;
-    transition: all 0.3s ease;
-}
-
-/* Stilovi za levi deo navbar-a */
-.navbar-left {
-    display: flex;
-    align-items: center;
-    gap:10px;
-    
-}
-
-.navbar-brand {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    
-}
-
-.navbar-logo {
-    width: 80px;
-    height: 80px;
-    margin-right: 0px;
-}
-
-.navbar-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 10px;
-    color: white;
-}
-
-/* Stilovi za centralni deo navbar-a */
-.navbar-center {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-/* Stilovi za meni linkove */
-.navbar-menu {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin-top: 30px;
-    transition: all 0.3s ease;
-}
-
-.navbar-menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.3rem;
-    gap:4%;
-    padding: 8px 12px;
-    transition: background-color 0.3s;
-    transition: all 0.3s ease;
-}
-
-.navbar-menu li a:hover {
-   
-    color: #16C79A;
-    background-color: white;
-    border-radius: 4px;
-    font-size: 1.3rem;
-    transition: background-color 0.3s;
-    transition: all 0.3s ease;
-}
-/*padajuci meni u navbaru*/
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.dropdown-content {
-    display: none; /* Sakriveno po default-u */
-    position: absolute; /* Apsolutno pozicioniranje */
-    background-color: #16C79A; /* Boja pozadine padajućeg menija */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    border-radius: 5%;
-    text-align: center;
-    transition: all 0.3s ease;
-
-}
-
-.dropdown-content a {
-    display: block; /* Stavke u padajućem meniju su blokovi */
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #003f7f; /* Boja na hover */
-    transition: all 0.3s ease;
-}
-
-/* Prikazivanje padajućeg menija na hover */
-.dropdown:hover .dropdown-content {
-    display: block; /* Prikazivanje na hover */
-    transition: all 0.3s ease;
-}
-
-
-
-/*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
-.logo {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-}
-/* Desktop navbar - Prikazuje se samo na većim ekranima */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger .line {
-    width: 30px;
-    height: 3px;
-    background-color: white;
-    margin: 6px 0;
-}
-
-/* Offcanvas meni */
-.offcanvas {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Meni je inicijalno skriven sa desne strane */
-    width: 250px;
-    height: 100%;
-    background-color: #16C79A;
-    transition: right 0.3s ease;
-    visibility: visible; /* Pobrinite se da je meni vidljiv */
-    z-index: 9999; /* Visoki z-index da bi meni bio iznad drugih elemenata */
-    opacity: 1;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Dugme za zatvaranje menija */
-.exit-btn {
-    background-color: #16C79A;
-    color: white;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 10px 15px;
-    /*border-radius: 5px;*/
-}
-
-/* Linkovi unutar offcanvas menija */
-.offcanvas-links {
-    list-style: none;
-    padding: 0;
-    margin-top: 50px;
-}
-
-.offcanvas-links li {
-    margin: 20px 0;
-    text-align: center;
-    list-style: none;
-}
-
-.offcanvas-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-/* Responsive dizajn za mobilne uređaje */
-
-.dropdown-menu1 {
-    display: none; /* Skriven podmeni */
-    list-style: none;
-    padding-left: 20px;
-    font-size: 0.8;
-    border: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Blaga senka */
-
-}
-.dropdown-content {
-
-    position: absolute; /* Apsolutno pozicioniranje */
-    background-color: #16C79A; /* Boja pozadine padajućeg menija */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
-    z-index: 1000;
-    border-radius: 5%;
-    text-align: center;
-    transition: all 0.3s ease;
-    color:white;
-    border-radius: 3px;
-    transition: background-color 0.2s ease;
-
-}
-.dropdown-toggle::after {
-    content: '▼';
-    font-size: 12px;
-    position: absolute;
-    right: 15px;
-    transition: transform 0.3s ease;
-}
-.dropdown-toggle.active::after {
-    transform: rotate(180deg);
-}
+/* Navbar styles moved to `navbar.css` to avoid duplication. */
 
 
 
@@ -502,7 +288,8 @@ html{
     display: flex;
     align-items: center;
     /*max-width: 1000px;*/
-    width: 75%;
+    width: 90%;
+    max-width: 1200px;
     height: auto;
     margin: 50px auto;
     padding: 20px;
@@ -645,6 +432,10 @@ html{
         display: none;
     }
     
+    .about-image img {
+        display: none !important;
+    }
+    
 
     
 }
@@ -684,5 +475,61 @@ html{
         color: #333;
         line-height: 1.6;
         margin-bottom: 10px;
+    }
+}
+
+/* Global mobile optimizations (conservative, low-risk) */
+@media (max-width: 768px) {
+    /* Make large containers full-width and reduce padding */
+    .container,
+    .tab-container,
+    .about-section,
+    .erasmus-container,
+    .upis-container,
+    .news-container {
+        width: 95% !important;
+        padding: 12px !important;
+        margin: 18px auto !important;
+    }
+
+    /* Navbar compacting and small-screen navbar rules have been centralized
+       into `navbar.css`. If you need page-specific navbar tweaks, add them
+       into `navbar.css` under page-specific selectors. */
+
+    /* Make carousel and hero images more compact */
+    .carousel {
+        width: 100%;
+        height: 320px;
+    }
+    .carousel-image {
+        position: relative;
+        height: 100%;
+        border-radius: 6px;
+    }
+    .carousel-arrow {
+        font-size: 22px;
+        padding: 8px;
+    }
+
+    /* Responsive images and media */
+    img, .about-image img, .about-image1 img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    /* Reduce typography for small screens */
+    h1 { font-size: 1.6rem; }
+    h2 { font-size: 1.25rem; }
+    .news-section h2 { font-size: 1.4rem; }
+
+    /* Tidy up footers */
+    .footer { font-size: 1rem; padding: 14px; }
+
+    /* Make lists easier to tap */
+    .pdf-links .pdf-button,
+    .offcanvas-links a,
+    .news-item {
+        font-size: 1rem;
     }
 }
