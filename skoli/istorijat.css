@@ -129,12 +129,20 @@ ul {
 
 
 
+.about-text1 {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .about-text1 p {
     font-size: 1rem;
     color: #333;
     line-height: 1.6;
     margin-bottom: 5px;
-    margin-left: 20px;
+    margin-left: 0px;
 }
 
 .about-text1 h2 {
@@ -142,20 +150,27 @@ ul {
     color: #19456B;
     margin-bottom: 10px;
     text-align: left;
-    margin-left: 400px;
-    
+    margin-left: 0px;
 }
 
 .about-sadrzaj1{
     margin-top: 0px;
 }
 
+.about-image1 {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 .about-image1 img {
     width: 100%;
-    height: 400px;
+    max-width: 400px;
+    height: auto;
     border-radius: 5%;
-    align-items: right;
-    margin-left: 70px;
+    margin-left: 0px;
 }
 
 
@@ -231,16 +246,52 @@ ul {
 
 @media (max-width: 615px){
     /* Navbar small-screen tweaks moved to `navbar.css` */
-    /*.about-image img {
-        width: 0;
-        height: 0px;
-        display: none;
-    }*/
     .h1 {
         text-align: center;
-    color: #19456B;
+        color: #19456B;
         margin-top: 40px;
-        font-size: 2.7rem;
+        font-size: 2.2rem;
+    }
+
+    .about-section {
+        width: 95%;
+        padding: 15px;
+        margin: 30px auto;
+    }
+
+    .about-text1 h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-text1 p {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .about-image1 img {
+        max-width: 250px;
+    }
+}
+
+/* Tablet responsive stilovi */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-text1 {
+        text-align: center;
+        order: 1;
+    }
+    
+    .about-image1 {
+        order: 2;
+        margin-top: 20px;
+    }
+    
+    .about-image1 img {
+        max-width: 300px;
     }
 }
 
@@ -261,7 +312,6 @@ ul {
         border-radius: 8px;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     }
-
 }
 @media (max-width: 1250px){
     .navbar-menu {
@@ -287,4 +337,19 @@ ul {
         color: white;
     }
 
+}
+
+/* Note stilovi (kopirani iz ekskurzije.css) */
+.note {
+    margin: 40px auto;
+    font-style: italic;
+    color: #444;
+    background: #f5f9ff;
+    padding: 15px 20px;
+    border-left: 4px solid gray;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.05em;
+    width: 90%;
+    max-width: 1200px;
 }

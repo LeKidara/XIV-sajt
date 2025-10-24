@@ -1,0 +1,151 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.ekskurzije-container {
+    width: 85%;
+    max-width: 1100px;
+    background: #ffffff;
+    margin: 60px auto;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #16C79A;
+}
+
+h1 {
+    text-align: center;
+    color: #00509e;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+.uvod {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 40px;
+}
+
+.year-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    gap: 40px;
+    flex-wrap: wrap;
+    transition: transform 0.4s ease;
+}
+
+.year-section:hover {
+    transform: scale(1.02);
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.text h2 {
+    color: #003d7a;
+    border-bottom: 2px solid gray;
+    display: inline-block;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.text p {
+    line-height: 1.8;
+    font-size: 1.05em;
+    color: #333;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease;
+}
+
+.image img:hover {
+    transform: scale(1.05);
+}
+
+.note {
+    margin-top: 40px;
+    font-style: italic;
+    color: #444;
+    background: #f5f9ff;
+    padding: 15px 20px;
+    border-left: 4px solid gray;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.05em;
+}
+
+
+
+.footer {
+    background-color: #16C79A; /* Tamnoplava pozadina */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Flexbox za kolone u footeru */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Razmak između kolona */
+    flex-wrap: wrap; /* Omogućava prelamanje u novi red na manjim ekranima */
+}
+
+/* Stilovi za svaku kolonu */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Linija ispod sadržaja */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Svetlija linija */
+    margin: 15px 0;
+    width: 80%; /* Linija je malo uža od celog footer-a */
+    margin: 15px auto; /* Centrirana */
+}
+
+/* Tekst ispod linije */
+.footer-rights {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+
+::selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+}
+/* Za WebKit pretraživače (Chrome, Safari) */
+::-moz-selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+    
+}

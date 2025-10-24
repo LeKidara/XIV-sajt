@@ -1,0 +1,145 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f5f8ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.aktivnosti-container {
+    width: 85%;
+    max-width: 1100px;
+    background: #ffffff;
+    margin: 60px auto;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #16C79A;
+}
+
+h1 {
+    text-align: center;
+    color: #00509e;
+    font-size: 2.2em;
+    margin-bottom: 25px;
+}
+
+.uvod {
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 50px;
+}
+
+.aktivnosti-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.aktivnost {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 12px;
+    background: #f9fbff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.aktivnost:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.aktivnost img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #16C79A;
+}
+
+.info h2 {
+    color: #003d7a;
+    margin: 0;
+    font-size: 1.4em;
+}
+
+.info h3 {
+    margin: 5px 0 10px 0;
+    color: #777;
+    font-weight: normal;
+}
+
+.info p {
+    margin: 0;
+    line-height: 1.7;
+    color: #333;
+}
+
+
+.footer {
+    background-color: #16C79A; /* Tamnoplava pozadina */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Flexbox za kolone u footeru */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Razmak između kolona */
+    flex-wrap: wrap; /* Omogućava prelamanje u novi red na manjim ekranima */
+}
+
+/* Stilovi za svaku kolonu */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Linija ispod sadržaja */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Svetlija linija */
+    margin: 15px 0;
+    width: 80%; /* Linija je malo uža od celog footer-a */
+    margin: 15px auto; /* Centrirana */
+}
+
+/* Tekst ispod linije */
+.footer-rights {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+
+::selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+}
+/* Za WebKit pretraživače (Chrome, Safari) */
+::-moz-selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+    
+}
+
+/* Responsivnost */
+@media (max-width: 768px) {
+    .aktivnost {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aktivnost img {
+        width: 100px;
+        height: 100px;
+    }
+}
