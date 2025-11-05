@@ -18,4 +18,366 @@ html{
 
 
 
-/* Navbar overrides moved to `navbar.css` (see d:/Desktop/XIVsajt/navbar.css). */
+/* Restored news page styles (navbar is centralized in `navbar.css`). */
+
+/* prazni spacers used by layout */
+.prazan{
+    height: 90px;
+    width: 100%;
+    background-color: transparent;
+}
+.prazan1{
+    height: 30px;
+    width: 100%;
+    background-color: transparent;
+}
+
+.news-naslov {
+    font-size: 3rem;
+    color: #19456B;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.custom-divider {
+    height: 2px; /* Debljina linije */
+    background-color: #19456B; /* Boja linije */
+    width: 100%; /* Linija ide preko celog ekrana */
+    margin: 30px 0; /* Razmak iznad i ispod linije */
+    display: block;
+    align-items: center;
+
+}
+
+
+/* Kontejner za vesti */
+.news-container {
+
+    width:95%;
+    height: auto;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+/* Stil svake vesti */
+.news-item {
+    background-color: #fff;
+    padding: 20px 20px 20px 28px; /* extra left padding to make room for accent bar */
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    transform: translateX(100px); /* Pomera početni položaj vesti udesno */
+    animation: slideInFromRight 0.8s cubic-bezier(.2,.9,.2,1) forwards;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    position: relative; /* for the accent bar */
+    overflow: visible;
+}
+
+/* Layout for news items with thumbnail + body */
+.news-item {
+    display: flex;
+    flex-direction: row-reverse; /* place thumbnail on the right on larger screens */
+    gap: 18px;
+    align-items: flex-start;
+}
+
+.news-thumb {
+    flex: 0 0 140px; /* fixed thumbnail column */
+}
+.news-thumb img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.news-body {
+    flex: 1 1 auto;
+}
+
+
+
+.news-item h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Left green accent bar (matches footer) */
+.news-item::before {
+    content: "";
+    position: absolute;
+    left: 8px;
+    top: 12px;
+    bottom: 12px;
+    width: 8px;
+    background: #16C79A; /* same green as footer */
+    border-radius: 4px;
+    transform-origin: top;
+    transform: scaleY(0);
+    box-shadow: 0 0 0 rgba(22,199,154,0.0);
+    animation: growBar 0.5s ease forwards;
+}
+
+@keyframes growBar {
+    to { transform: scaleY(1); box-shadow: 0 6px 18px rgba(22,199,154,0.08); }
+}
+
+/* Hover polish */
+.news-item:hover {
+    /* Move slightly up and to the left for a subtle floating effect */
+    transform: translateY(-8px) translateX(-8px);
+    box-shadow: 0 12px 34px rgba(0,0,0,0.14);
+}
+.news-item:hover::before {
+    transform: scaleY(1.03);
+    box-shadow: 0 10px 30px rgba(22,199,154,0.12);
+}
+
+/* Thumbnail and heading micro-interactions */
+.news-thumb img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.news-item:hover .news-thumb img {
+    transform: scale(1.035);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+.news-body h2 {
+    transition: color 0.25s ease;
+}
+.news-item:hover .news-body h2 {
+    /* only change color on hover; the entire .news-item is moved by the parent transform */
+    color: #00509e;
+}
+
+/* Selected state - persistent version of hover (used when user selects a news item) */
+.news-item.selected {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 40px rgba(0,0,0,0.14);
+}
+.news-item.selected::before {
+    transform: scaleY(1.05);
+    box-shadow: 0 16px 40px rgba(22,199,154,0.14);
+}
+.news-item.selected .news-thumb img {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.14);
+}
+.news-item.selected .news-body h2 {
+    /* rely on parent transform for movement; only change color */
+    color: #003d7a;
+}
+
+/* Accessibility focus-visible state to match selected/hover */
+.news-item:focus-visible {
+    outline: none;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.news-item .date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.news-item p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.footer {
+    background-color: #16C79A; /* Tamnoplava pozadina */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* Flexbox za kolone u footeru */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Razmak između kolona */
+    flex-wrap: wrap; /* Omogućava prelamanje u novi red na manjim ekranima */
+}
+
+/* Stilovi za svaku kolonu */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Linija ispod sadržaja */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Svetlija linija */
+    margin: 15px 0;
+    width: 80%; /* Linija je malo uža od celog footer-a */
+    margin: 15px auto; /* Centrirana */
+}
+
+/* Tekst ispod linije */
+.footer-rights {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+
+
+/* Animacija za prikazivanje vesti s desne strane */
+@keyframes slideInFromRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+::selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+}
+/* Za WebKit pretraživače (Chrome, Safari) */
+::-moz-selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+    
+}
+.transition-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00509e; /* Plava boja za dugmad */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em; /* Veći font za dugmad */
+    transition: background-color 0.3s, transform 0.3s; /* Tranzicije za boju i transformaciju */
+}
+
+.transition-link:hover {
+    background-color: #003d7a; /* Tamnija plava na hover */
+    transform: scale(1.05); /* Lagano uvećanje na hover */
+}
+
+.transition-link:active {
+    transform: scale(0.95); /* Umanjenje na pritisak */
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: #00509e;
+    opacity: 0;
+    pointer-events: none; /* Ne ometa interakciju kada se ne prikazuje */
+    transition: opacity 0.3s ease; /* Tranzicija za fade efekt */
+}
+
+@media (max-width: 615px){
+
+    .about-image img {
+        width: 0;
+        height: 0px;
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    /* On small screens place the image below the text (stacked, image after body) */
+    .news-item {
+        flex-direction: column-reverse;
+    }
+    .news-thumb {
+        flex: 0 0 auto;
+        margin-top: 12px; /* small gap when stacked */
+    }
+    .news-thumb img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+    }
+}
+/*samo za veci ekran*/
+
+
+
+@media (max-width: 990px) {
+    .carousel {
+        position: relative;
+        width: 80%;
+        /*max-width: 10000px;*/
+        height: 400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .about-section {
+        display: flex;
+        align-items: center;
+        /*max-width: 1000px;*/
+        width: 97%;
+        height: auto;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    .about-image img {
+        width: auto;
+        height: 400px;
+        border-radius: 30%;
+    }
+    .about-text p {
+        font-size: 0.8rem;
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1250px){
+    .navbar-menu {
+
+        gap: 10px;
+
+    }
+    .navbar-menu li a {
+
+        font-size: 1.1rem;
+
+    }
+    .navbar-logo {
+        width: 55px;
+        height: 55px;
+        margin-right: 0px;
+    }
+
+    .navbar-title {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-left: 10px;
+        color: white;
+    }
+
+}
+

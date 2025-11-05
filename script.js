@@ -75,4 +75,38 @@
         });
     }
 
+    /* ----------------------
+       News item selection
+       - Adds a persistent `.selected` class when a news item is clicked
+       - Makes news items keyboard-focusable (tabindex=0) if not already
+       - Removes `.selected` from other items so only one is active
+    ------------------------*/
+    (function initNewsSelection(){
+        const newsItems = document.querySelectorAll('.news-item');
+        if (!newsItems || !newsItems.length) return;
+
+        function clearSelected() {
+            newsItems.forEach(n => n.classList.remove('selected'));
+        }
+
+        newsItems.forEach(item => {
+            // ensure focusable for keyboard users
+            if (!item.hasAttribute('tabindex')) item.setAttribute('tabindex', '0');
+
+            item.addEventListener('click', (e) => {
+                // toggle selection on click, but ensure single selection
+                const isSelected = item.classList.contains('selected');
+                clearSelected();
+                if (!isSelected) item.classList.add('selected');
+            });
+
+            item.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    item.click();
+                }
+            });
+        });
+    })();
+
 })();
