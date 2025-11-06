@@ -23,7 +23,7 @@
         <nav class="navbar desktop-navbar">
         <div class="navbar-left">
             <a href="index.html" class="navbar-brand">
-                <img src="slike/konceptZaLogo.png" alt="Logo" class="navbar-logo">
+                <img src="slike/XIVlogoFinalno.png" alt="Logo" class="navbar-logo">
                 <span class="navbar-title">XIV гимназија</span>
             </a>
         </div>
@@ -38,6 +38,8 @@
                         <a class="hRed" href="skoli/upis.html">Упис</a> 
                         <a class="hRed" href="skoli/javneNabavke.html">Јавне набавке</a>
                         <a class="hRed" href="skoli/erasmus.html">Erasmus</a>
+                        <a class="hRed" href="skoli/etwinning.html">eTwinning</a>
+
                     </div>
                 </li>
 
@@ -88,7 +90,7 @@
                 <a href="index.html">Почетна</a>
             </li>
             <li>
-                    <a href="#" class="dropdown-toggle">O Skoli</a>
+                    <a href="#" class="dropdown-toggle">O школи</a>
                     <!-- Podmeni -->
                     <ul class="dropdown-menu1">
                         <li class="dropdown-content1"><a href="skoli/istorijat.html">Историјат</a></li>
@@ -140,9 +142,10 @@
 
    
     <div class="carousel">
-    <div class="carousel-image image1 active"></div>
-    <div class="carousel-image image2"></div>
-    <div class="carousel-image image3"></div>
+    <div class="carousel-image image1 active"><img src="slike/ringispil1.JPG" alt="Slide 1" loading="lazy"></div>
+    <div class="carousel-image image2"><img src="slike/ringispil2.JPG" alt="Slide 2" loading="lazy"></div>
+    <div class="carousel-image image3"><img src="slike/ringispil3.JPG" alt="Slide 3" loading="lazy"></div>
+    <div class="carousel-image image4" data-href="vesti/novosti.html"><img src="slike/ringispil1.JPG" alt="Slide 4 - Vesti" loading="lazy"></div>
 
     <!-- Strelice za navigaciju -->
     <button class="carousel-arrow left-arrow" onclick="prevSlide()">&#10094;</button>
@@ -203,7 +206,7 @@
    <!-- o skoli -->
         <div class="about-section">
             <div class="about-image">
-                <img src="slike/skola1.png" alt="Slika škole">
+                <img class="about-photo" src="slike/skola1.JPG" alt="Slika школе" loading="lazy">
             </div>
             <div class="about-text">
                 <h2>О школи</h2>
@@ -261,6 +264,26 @@
     // Automatsko menjanje slika
     if (slides && slides.length > 1) {
         setInterval(nextSlide, slideInterval);
+    }
+
+    // Make any slide with a data-href clickable (navigates to that URL)
+    if (slides && slides.length > 0) {
+        slides.forEach(slide => {
+            const href = slide.dataset ? slide.dataset.href : null;
+            if (href) {
+                slide.style.cursor = 'pointer';
+                slide.addEventListener('click', () => {
+                    window.location.href = href;
+                });
+                // also allow keyboard activation
+                slide.setAttribute('tabindex', '0');
+                slide.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        window.location.href = href;
+                    }
+                });
+            }
+        });
     }
 </script>
 

@@ -81,6 +81,86 @@ body {
     margin-top: 30px;
 }
 
+/* Alumni / former students section */
+.alumni-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 18px;
+}
+.alumni-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+.alumni-card:hover { transform: translateY(-6px); box-shadow: 0 12px 30px rgba(0,0,0,0.08); }
+.alumni-thumb {
+    flex: 0 0 84px;
+}
+.alumni-thumb img {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+.alumni-body h3 { margin: 0 0 6px 0; color: #003d7a; }
+.alumni-role { font-size: 0.9rem; color: #16C79A; margin-bottom: 8px; }
+.alumni-desc { font-size: 0.95rem; margin-bottom: 8px; color: #333; }
+.alumni-achievements { margin: 0; padding-left: 18px; color: #333; }
+.alumni-achievements li { margin-bottom: 6px; }
+.alumni-media video, .alumni-media audio { width: 100%; border-radius: 6px; margin-top: 8px; }
+
+/* Note box for submissions */
+.alumni-note {
+    /* match .note styling from istorijat.css for visual consistency */
+    margin: 20px auto;
+    font-style: italic;
+    color: #444;
+    background: #f5f9ff;
+    padding: 15px 20px;
+    border-left: 4px solid gray;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.05em;
+    width: 90%;
+    max-width: 1200px;
+}
+.alumni-note a { color: #00509e; text-decoration: underline; }
+
+@media (max-width: 1100px) {
+    .alumni-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 720px) {
+    .tab-container { width: 96%; padding: 18px; }
+    .tabs { flex-wrap: wrap; gap: 8px; }
+    .alumni-grid { grid-template-columns: 1fr; }
+    .alumni-card { flex-direction: row; gap: 12px; }
+    .alumni-thumb { flex: 0 0 72px; }
+    .alumni-thumb img { width: 72px; height: 72px; }
+}
+
+@media (max-width: 480px) {
+    .tabs { justify-content: stretch; }
+    .tabs .tab {
+        flex: 1 1 100%;
+        padding: 12px 10px;
+        font-size: 0.95rem;
+        text-align: center;
+        border-radius: 8px;
+        background: #fff;
+        margin-bottom: 6px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    }
+    .tab-container { padding: 14px; }
+}
+
 .tab-panel {
     display: none;
     animation: fadeIn 0.5s ease;

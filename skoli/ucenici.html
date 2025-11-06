@@ -13,9 +13,9 @@
 
         <!-- TAB DUGMIĆI -->
         <div class="tabs">
-            <button class="tab active" onclick="showTab('generacija')">Ученици генерације</button>
-            <button class="tab" onclick="showTab('vandredni')">Ванредни ученици</button>
-            <button class="tab" onclick="showTab('nagradjeni')">Награђивани ученици</button>
+            <button class="tab active" onclick="showTab('generacija', event)">Ученици генерације</button>
+            <button class="tab" onclick="showTab('vandredni', event)">Ванредни ученици</button>
+            <button class="tab" onclick="showTab('bivsi', event)">Бивши ученици</button>
         </div>
 
         <!-- SADRŽAJ TABOVA -->
@@ -35,11 +35,75 @@
                 уз благовремену пријаву и договор са предметним наставником.“</p>
             </div>
 
-            <div id="nagradjeni" class="tab-panel">
-                <h2>Награђивани ученици</h2>
-                <p>Овде се могу приказати најзначајнији успеси ученика на такмичењима, конкурсима и пројектима. 
-                На пример: „Ученици XIV београдске гимназије освојили су бројне награде на републичким такмичењима из математике, 
-                физике и српског језика, као и признања на међународним научним и културним манифестацијама.“</p>
+
+            <div id="bivsi" class="tab-panel">
+
+                <div class="alumni-note">
+                    <p><strong>Желите да будете представљени?</strong> Ако желите да пошаљете свој профил и будете међу нашим бившим ученицима, пошаљите кратку биографију, фотографију и листу постигнућа на: <a href="mailto:kontakt@skola.rs">kontakt@skola.rs</a>.</p>
+                </div>
+
+                <div class="alumni-grid">
+                    <!-- Примерак картице: копирајте и уредите за новог бившег ученика -->
+                    <div class="alumni-card">
+                        <div class="alumni-thumb">
+                            <img src="../slike/ucenik1.jpg" alt="Фотографија ученика">
+                        </div>
+                        <div class="alumni-body">
+                            <h3>Милица Јовановић</h3>
+                            <p class="alumni-role">Програмерка / Dipl. Computer Science</p>
+                            <p class="alumni-desc">Милица је била активна у програмским клубовима, освојила прво место на такмичењу из информатике и наставила каријеру у развоју софтвера.</p>
+                            <ul class="alumni-achievements">
+                                <li>Прво место — Републичко такмичење из информатике (2022)</li>
+                                <li>Стипендија за студије у иностранству (2023)</li>
+                            </ul>
+                            
+                            
+                        </div>
+                    </div>
+
+                    <div class="alumni-card">
+                        <div class="alumni-thumb">
+                            <img src="../slike/ucenik2.jpg" alt="Фотографија ученика">
+                        </div>
+                        <div class="alumni-body">
+                            <h3>Драган Петровић</h3>
+                            <p class="alumni-role">Истраживач / Научни радник</p>
+                            <p class="alumni-desc">Драган је наставио рад у области физике и објавио неколико студија на међународним конференцијама.</p>
+                            <ul class="alumni-achievements">
+                                <li>Публикација у међународном журналу (2021)</li>
+                                <li>Признање за младе таленте (2020)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alumni-card">
+                        <div class="alumni-thumb">
+                            <img src="../slike/ucenik3.jpg" alt="Фотографија ученика">
+                        </div>
+                        <div class="alumni-body">
+                            <h3>Јована Марковић</h3>
+                            <p class="alumni-role">Предузетница</p>
+                            <p class="alumni-desc">Јована је основала успешан стартап у области екологије и сваке године учествује у програмима подршке младим предузетницима.</p>
+                            <ul class="alumni-achievements">
+                                <li>Награда за иновацију у стартапу (2024)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="alumni-card">
+                        <div class="alumni-thumb">
+                            <img src="../slike/ucenik3.jpg" alt="Фотографија ученика">
+                        </div>
+                        <div class="alumni-body">
+                            <h3>Јована Марковић</h3>
+                            <p class="alumni-role">Предузетница</p>
+                            <p class="alumni-desc">Јована је основала успешан стартап у области екологије и сваке године учествује у програмима подршке младим предузетницима.</p>
+                            <ul class="alumni-achievements">
+                                <li>Награда за иновацију у стартапу (2024)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
