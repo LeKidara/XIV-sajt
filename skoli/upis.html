@@ -5,8 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Упис првака | XIV београдска гимназија</title>
     <link rel="stylesheet" href="upis.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+    <link rel="icon" href="slike/ikonica.png" type="image/png">
 <body>
+
+    <!-- Shared navbar (from site root) -->
+    <nav class="navbar desktop-navbar">
+        <div class="navbar-left">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../slike/XIVlogoFinalno.png" alt="Logo" class="navbar-logo">
+                <span class="navbar-title">XIV гимназија</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Почетна</a></li>
+                <li class="dropdown"><a href="#">О школи▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="istorijat.html">Историјат</a>
+                        <a class="hRed" href="ucenik.html">Ученик</a>
+                        <a class="hRed" href="zaposleni.html">Запослени</a>
+                        <a class="hRed" href="upis.html">Упис</a>
+                        <a class="hRed" href="erasmus.html">Erasmus</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="#">Вести▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="../vesti/novosti.html">Новости</a>
+                        <a class="hRed" href="../vesti/Casopis.html">Школски часопис</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="../orgrada/organizacijaRada.html">Организација рада</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+    </nav>
+
+    <div class="offcanvas" id="offcanvas"><div class="offcanvas-header"><button class="exit-btn" id="exit-btn">X</button></div>
+        <ul class="offcanvas-links">
+            <li><a href="../index.html">Почетна</a></li>
+            <li><a href="istorijat.html">Историјат</a></li>
+            <li><a href="../vesti/novosti.html">Новости</a></li>
+            <li><a href="../nastava/predmeti.html">Предмети</a></li>
+        </ul>
+    </div>
+
+    <div class = "prazan"></div>
 
     <div class="upis-container">
         
@@ -66,4 +112,5 @@
 
 
 </body>
+    <script src="/script.js"></script>
 </html>

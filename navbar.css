@@ -414,6 +414,17 @@ body {
     .hRed {
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     }
+    .prazan{
+    /* Spacer to push page content below the fixed navbar. Adjust if your navbar height changes. */
+    height: 110px;
+    width: 100%;
+    background-color: transparent;
+}
+.prazan1{
+    height: 30px;
+    width: 100%;
+    background-color: transparent;
+}
 
 
     /* --------------------------------------------------------------------------- */

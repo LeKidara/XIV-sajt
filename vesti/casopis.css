@@ -1,0 +1,209 @@
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background:var(--light);
+  color:#222;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+
+.wrap{
+
+    max-width: 1100px;
+    margin: 60px auto;
+    background: #ffffff;
+    padding: 40px 50px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-left: 6px solid #16C79A;
+}
+
+.site-header{
+  background:linear-gradient(90deg,var(--accent),#0077c7);
+  color:white;
+  padding:24px 0;
+  margin-bottom:28px;
+}
+.site-header h1{
+  margin:0;
+  font-size:1.6rem;
+  text-align:center;
+}
+.site-header .subtitle{
+  text-align:center;
+  opacity:0.95;
+  margin-top:6px;
+}
+
+/* MAIN GRID: content + sidebar */
+.main-grid{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:28px;
+  align-items:start;
+  margin-bottom:40px;
+}
+
+/* Content */
+.content .intro p{
+  margin:0 0 14px 0;
+  font-size:1.02rem;
+  text-align:justify;
+}
+
+.content h2{
+  color:var(--accent);
+  margin-top:18px;
+}
+
+hr{border:none;border-top:1px solid #e9eef8;margin:22px 0}
+
+/* Downloads */
+.downloads .btn{
+  display:inline-block;
+  background:var(--accent);
+  color:white;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  margin-top:8px;
+}
+.downloads .note{font-size:0.9rem;color:var(--muted);margin-top:8px}
+
+/* Sidebar boxes */
+.sidebar .box{
+  background:var(--card);
+  padding:14px;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom:18px;
+}
+.sidebar h3{margin:0 0 12px 0;color:var(--accent)}
+
+/* Bookcase iframe */
+.bookcase{
+  width:100%;
+  height:420px;
+  overflow:hidden;
+  border-radius:8px;
+  border:1px solid #e6f0ff;
+}
+.bookcase iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* Archive list */
+.archive-list{list-style:none;padding:0;margin:0}
+.archive-list li{margin:6px 0}
+.archive-list a{color:var(--accent);text-decoration:none}
+.archive-list a:hover{text-decoration:underline}
+
+/* Archive panel */
+.archive-panel{
+  display:none;
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px dashed #e6eef8;
+  color:#333;
+}
+.archive-panel.open{display:block}
+.small-btn{
+  background:var(--yellow);
+  border:0;
+  padding:8px 12px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+  margin-top:10px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.project-list a {
+    text-decoration: none;
+    color: #003d7a;
+    background-color: #f5f9ff;
+    border: 1px solid #cfe0ff;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1.05em;
+}
+
+.project-list a:hover {
+    background-color: #00509e;
+    color: #ffffff;
+    transform: translateX(5px);
+    box-shadow: 0 4px 10px rgba(0, 80, 158, 0.2);
+}
+
+.footer {
+    background-color: #16C79A; /* Tamnoplava pozadina */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: auto; /* pushes footer to bottom when page height > content */
+}
+
+/* Flexbox za kolone u footeru */
+.footer-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Razmak između kolona */
+    flex-wrap: wrap; /* Omogućava prelamanje u novi red na manjim ekranima */
+}
+
+/* Stilovi za svaku kolonu */
+.footer-column p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+/* Linija ispod sadržaja */
+.footer-line {
+    border: none;
+    border-top: 1px solid #ddd; /* Svetlija linija */
+    margin: 15px 0;
+    width: 80%; /* Linija je malo uža od celog footer-a */
+    margin: 15px auto; /* Centrirana */
+}
+
+/* Tekst ispod linije */
+.footer-rights {
+    font-size: 0.9rem;
+    color: #ccc;
+    margin-top: 10px;
+}
+
+
+::selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+}
+/* Za WebKit pretraživače (Chrome, Safari) */
+::-moz-selection {
+    background-color: #16C79A; /* Boja pozadine kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje */
+    
+}
+
+
+/* Small screens */
+@media (max-width:980px){
+  .main-grid{grid-template-columns:1fr}
+  .sidebar{order:2}
+  .content{order:1}
+  .bookcase{height:320px}
+}

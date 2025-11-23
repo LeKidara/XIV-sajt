@@ -5,8 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ученици</title>
     <link rel="stylesheet" href="ucenici.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
+    <link rel="icon" href="slike/ikonica.png" type="image/png">
 <body>
+
+    <!-- Shared navbar (same as index) -->
+    <nav class="navbar desktop-navbar">
+    <div class="navbar-left">
+        <a href="../index.html" class="navbar-brand">
+            <img src="../slike/XIVlogoFinalno.png" alt="Logo" class="navbar-logo">
+            <span class="navbar-title">XIV гимназија</span>
+        </a>
+    </div>
+    <div class="navbar-center">
+        <ul class="navbar-menu">
+            <li><a href="../index.html">Почетна</a></li>
+            <li class="dropdown"><a href="#">О школи▼</a>
+                <div class="dropdown-content">
+                    <a class="hRed" href="istorijat.html">Историјат</a>
+                    <a class="hRed" href="ucenik.html">Ученик</a>
+                    <a class="hRed" href="zaposleni.html">Запослени</a>
+                    <a class="hRed" href="upis.html">Упис</a>
+                    <a class="hRed" href="javneNabavke.html">Јавне набавке</a>
+                    <a class="hRed" href="erasmus.html">Erasmus</a>
+                    <a class="hRed" href="etwinning.html">eTwinning</a>
+
+                </div>
+            </li>
+
+            <li class="dropdown"><a href="#">Вести▼</a>
+                <div class="dropdown-content">
+                    <a class="hRed" href="../vesti/novosti.html">Новости</a>
+                    <a class="hRed" href="../vesti/Casopis.html">Школски часопис</a>
+                    <a class="hRed" href="/vesti/arhiv.html">Aрхив</a>
+                </div>
+            </li>
+
+            <li class="dropdown"><a href="#">Настава▼</a>
+                <div class="dropdown-content">
+                    <a class="hRed" href="../nastava/predmeti.html">Предмети</a>
+                    <a class="hRed" href="../nastava/udzbenici.html">Уџбеници</a>
+                    <a class="hRed" href="../nastava/IzPred.html">Изборни предмети</a>
+                </div>
+            </li>
+
+            <li class="dropdown"><a href="#">Активонсти▼</a>
+                <div class="dropdown-content">
+                    <a class="hRed" href="../aktivnosti/ucenicki.html">Ученички парламент</a>
+                    <a class="hRed" href="../aktivnosti/ekskurzije.html">Екскурзије и путовања</a>
+                    <a class="hRed" href="../aktivnosti/sekcije.html">Секције и ваннаставне активности</a>
+                </div>
+            <li>
+                <a href="../orgrada/organizacijaRada.html">Организација рада</a>
+
+            </li>
+            </li>
+        </ul>
+        
+    </div>
+    <div class="hamburger" id="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+    </div>
+    </nav>
+
+    <div class = "prazan"></div>
 
     <div class="tab-container">
         <h1>Ученици</h1>
@@ -124,6 +190,8 @@
         <p class="footer-rights">© Четрнаеста београдска гимназија 2024. Сва права задржана. WEB DIZAJN: studio Srbljanović</p>
     </footer>
 
+</script>
+    <script src="/script.js"></script>
     <script src="ucenici.js"></script>
 </body>
 </html>

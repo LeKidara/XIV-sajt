@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AD ASTRA — Школски часопис | XIV београдска гимназија</title>
+  <link rel="stylesheet" href="casopis.css">
+  <link rel="stylesheet" href="../navbar.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+  <link rel="icon" href="../slike/ikonica.png" type="image/png">
+<body>
+
+  <!-- Shared navbar (from site root) -->
+  <nav class="navbar desktop-navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="navbar-brand">
+                <img src="../slike/XIVlogoFinalno.png" alt="Logo" class="navbar-logo">
+                <span class="navbar-title">XIV гимназија</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <ul class="navbar-menu">
+                <li><a href="index.html">Почетна</a></li>
+                <li class="dropdown"><a href="#">О школи▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="../skoli/istorijat.html">Историјат</a>
+                        <a class="hRed" href="../skoli/ucenik.html">Ученик</a>
+                        <a class="hRed" href="../skoli/zaposleni.html">Запослени</a>
+                        <a class="hRed" href="../skoli/upis.html">Упис</a> 
+                        <a class="hRed" href="../skoli/erasmus.html">Erasmus</a>
+                        <a class="hRed" href="../skoli/etwinning.html">eTwinning</a>
+
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="#">Вести▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="novosti.html">Новости</a>
+                        <a class="hRed" href="Casopis.html">Школски часопис</a>
+                        <a class="hRed" href="https://xivgimnazija.wordpress.com/">Aрхив</a>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="#">Настава▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="../nastava/predmeti.html">Предмети</a>
+                        <a class="hRed" href="../nastava/udzbenici.html">Уџбеници</a>
+                        <a class="hRed" href="../nastava/IzPred.html">Изборни предмети</a>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="#">Активонсти▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="../aktivnosti/ucenicki.html">Ученички парламент</a>
+                        <a class="hRed" href="../aktivnosti/ekskurzije.html">Екскурзије и путовања</a>
+                        <a class="hRed" href="../aktivnosti/sekcije.html">Секције и ваннаставне активности</a>
+                    </div>
+                </li>
+
+                <li class="dropdown"><a href="../orgrada/organizacijaRada.html">Организација рада</a>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="hamburger" id="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+    </nav>
+    <div class="prazan1"></div>
+
+    <!-- Mobile Navbar with Hamburger Button -->
+    <div class="offcanvas" id="offcanvas">
+            <div class="offcanvas-header">
+            <button class="exit-btn" id="exit-btn">X</button>
+            </div>
+    <ul class="offcanvas-links">
+            <li>
+                <a href="index.html">Почетна</a>
+            </li>
+            <li>
+                    <a href="#" class="dropdown-toggle">O школи</a>
+                    <!-- Podmeni -->
+                    <ul class="dropdown-menu1">
+                        <li class="dropdown-content1"><a href="../skoli/istorijat.html">Историјат</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/ucenik.html">Ученик</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/zaposleni.html">Запослени</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/upis.html">Упис</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/erasmus.html">Erasmus</a></li>
+                    </ul>
+            </li>
+
+            <li>
+                <a href="#" class="dropdown-toggle">Вестi</a>
+                <!-- Podmeni -->
+                <ul class="dropdown-menu1">
+                    <li class="dropdown-content1"><a href="novosti.html">Новости</a></li>
+                    <li class="dropdown-content1"><a href="Casopis.html">Школски часопис</a></li>
+                    <li class="dropdown-content1"><a href="https://xivgimnazija.wordpress.com/">Aрхив</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <a href="#" class="dropdown-toggle">Nastava</a>
+                    <!-- Podmeni -->
+                     <ul class="dropdown-menu1">
+                         <li class="dropdown-content1"><a href="../nastava/predmeti.html">Предмети</a></li>
+                         <li class="dropdown-content1"><a href="../nastava/udzbenici.html">Уџбеници</a></li>
+                         <li class="dropdown-content1"><a href="../nastava/IzPred.html">Изборни предмети</a></li>
+                     </ul>
+            </li>
+            <li>
+                <a href="#" class="dropdown-toggle">Активонсти</a>
+                <!-- Podmeni -->
+                <ul class="dropdown-menu1">
+                <li class="dropdown-content1"><a href="../aktivnosti/ucenicki.html">Ученички парламент</a></li>
+                <li class="dropdown-content1"><a href="../aktivnosti/ekskurzije.html">Екскурзије и путовања</a></li>
+                <li class="dropdown-content1"><a href="../aktivnosti/sekcije.html">Секције и ваннаставне активности</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="../orgrada/organizacijaRada.html">Organizacija rada</a>
+            </li>
+        </ul>
+    </div>
+
+ <div class = "prazan"></div>
+  <main class="wrap main-grid">
+    <!-- Leva kolona: tekst -->
+    <section class="content">
+        <h1>AD ASTRA — ЧАСОПИС УЧЕНИКА XIV БЕОГРАДСКЕ ГИМНАЗИЈЕ</h1>
+        <p class="subtitle">ISSN 3042-2051 (Online)</p>
+
+      <article class="intro">
+        <p>
+          Часопис ученика XIV београдске гимназије основан је у фебруару 2024. године. Излази два пута годишње:
+          21. фебруара (Међународни дан матерњег језика) и 26. септембра (Европски дан језика). Реч је о вишејезичној
+          електронској публикацији која у сваком свом сегменту слави језик.
+        </p>
+
+        <p>
+          Ad astra има симболичних 14 рубрика, у оквиру којих се бави разноврсним темама. Сви аутори текстова су
+          ученици наше школе, са изузетком рубрике „Психолошки кутак", чији је аутор Ивана Лукић, писац за младе и психолог.
+          Дизајн часописа је такође у потпуности дело ученика XIV београдске гимназије.
+        </p>
+
+        <p>
+          Како је школа динамичан организам, аутори се смењују, а свака генерација има прилику да остави аутентичан
+          запис о свом времену, његовим лепотама и изазовима.
+        </p>
+
+        <p>
+          Ако су и постојали, примерци ранијих часописа у нашој школи нису сачувани. Крајем 70-их година прошлог века
+          су излазила Наша крила (наслов Ad astra и симболички подвлачи континуитет са овом публикацијом).
+          Чувена Бранка Оташевић је, као матуранткиња, покренула лист Израз, који нажалост није имао континуитет.
+        </p>
+
+        <p>
+          Пред вама је, дакле, једини приступачан извор кроз који се може завирити у свет ученика XIV београдске
+          гимназије, у ауторски израз који претходи биографији аутора.
+        </p>
+
+        <p>
+          Редакција часописа је у школској библиотеци, а нови чланови су увек добродошли.
+        </p>
+
+        <p class="urednicki"><em>Уреднички тим</em></p>
+      </article>
+
+      <hr>
+
+      <section class="downloads">
+        <h2>Преузми најновији број</h2>
+        <p>
+          Ако желиш да преузмеш цео број у PDF формату, кликни на дугме испод:
+        </p>
+        <div class="project-list">
+            <a href="projekti/izvestaj1.pdf" target="_blank">Ad astra 3</a>
+            <a href="projekti/izvestaj2.pdf" target="_blank">Ad astra 2</a>
+            <a href="projekti/izvestaj3.pdf" target="_blank">Ad astra 1</a>
+            <a href="projekti/izvestaj3.pdf" target="_blank">Ad astra 0</a>
+        </div>
+        
+
+        <!-- Lokalni fajl (developer: koristimo upload putanju) -->
+
+      </section>
+    </section>
+
+    <!-- Desna kolona: digitalna polica (AnyFlip) + arhiva -->
+    <aside class="sidebar">
+      <div class="box">
+        <h3>Дигитална полица</h3>
+
+        <!-- AnyFlip bookcase embed - iframe -->
+        <div class="bookcase">
+          <iframe
+            src="https://anyflip.com/bookcase/bzsmx/"
+            title="Digitalna polica - AD ASTRA"
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+
+        <p class="small">Ако је widget доступан, можете прегледати интерактивне публикације директно на полици.</p>
+      </div>
+
+      <div class="box">
+        <h3>Архива пројеката / стари бројеви</h3>
+        <ul class="archive-list">
+          <li><a href="pdf/ad_astra_2024_feb.pdf" target="_blank">Ad astra — 2024 (фебруар) — број 1 (PDF)</a></li>
+          <li><a href="pdf/ad_astra_2024_sep.pdf" target="_blank">Ad astra — 2024 (септембар) — број 2 (PDF)</a></li>
+          <li><a href="pdf/ad_astra_2025_feb.pdf" target="_blank">Ad astra — 2025 (фебруар) — број 3 (PDF)</a></li>
+        </ul>
+        <button id="toggleArchive" class="small-btn">Прикажи/Сакриј архиву</button>
+
+        <div id="archivePanel" class="archive-panel">
+          <p>Архива садржи све претходне издане бројеве и тематске прилоге. Кликните на фајл да бисте га преузели или отворили.</p>
+          <ul>
+            <li><a href="pdf/stari_broj_2019.pdf" target="_blank">Stari broj 2019 (пример)</a></li>
+            <li><a href="pdf/stari_broj_2018.pdf" target="_blank">Stari broj 2018 (пример)</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+   <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <p><strong>Адреса:</strong> Хаџи Проданова 5, Београд</p>
+            </div>
+            <div class="footer-column">
+                <p><strong>Контакт:</strong> Телефон: +381 11 123 4567 | Email: kontakt@skola.rs</p>
+            </div>
+        </div>
+        <hr class="footer-line">
+        <p class="footer-rights">© Четрнаеста београдска гимназија 2024. Сва права задржана. WEB DIZAJN: studio Srbljanović</p>
+    </footer>
+
+  <script>
+    // Toggle za arhivu
+    document.getElementById('toggleArchive').addEventListener('click', function() {
+      const panel = document.getElementById('archivePanel');
+      panel.classList.toggle('open');
+      this.textContent = panel.classList.contains('open') ? 'Сакриј архиву' : 'Прикажи архиву';
+    });
+  </script>
+  <script src="../script.js"></script>
+</body>
+</html>

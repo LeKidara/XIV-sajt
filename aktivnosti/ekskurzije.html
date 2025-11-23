@@ -5,8 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Екскурзије и путовања | XIV београдска гимназија</title>
     <link rel="stylesheet" href="ekskurzije.css">
+    <link rel="stylesheet" href="/navbar.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Shared navbar (from site root) -->
+    <nav class="navbar desktop-navbar">
+        <div class="navbar-left">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../slike/XIVlogoFinalno.png" alt="Logo" class="navbar-logo">
+                <span class="navbar-title">XIV гимназија</span>
+            </a>
+        </div>
+        <div class="navbar-center">
+            <ul class="navbar-menu">
+                <li><a href="../index.html">Почетна</a></li>
+                <li class="dropdown"><a href="#">О школи▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="../skoli/istorijat.html">Историјат</a>
+                        <a class="hRed" href="../skoli/ucenik.html">Ученик</a>
+                        <a class="hRed" href="../skoli/zaposleni.html">Запослени</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="#">Вести▼</a>
+                    <div class="dropdown-content">
+                        <a class="hRed" href="../vesti/novosti.html">Новости</a>
+                        <a class="hRed" href="../vesti/Casopis.html">Школски часопис</a>
+                    </div>
+                </li>
+                <li class="dropdown"><a href="../orgrada/organizacijaRada.html">Организација рада</a></li>
+            </ul>
+        </div>
+        <div class="hamburger" id="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+    </nav>
+
+    <div class = "prazan"></div>
 
     <div class="ekskurzije-container">
         <h1>Екскурзије и студијска путовања</h1>
@@ -29,7 +63,7 @@
                 </p>
             </div>
             <div class="image">
-                <img src="slike/prvi.jpg" alt="Екскурзија први разред">
+                <img src="../slike/prvi.jpg" alt="Екскурзија први разред">
             </div>
         </div>
 
@@ -45,7 +79,7 @@
                 </p>
             </div>
             <div class="image">
-                <img src="slike/drugi.jpg" alt="Екскурзија други разред">
+                <img src="../slike/drugi.jpg" alt="Екскурзија други разред">
             </div>
         </div>
 
@@ -61,7 +95,7 @@
                 </p>
             </div>
             <div class="image">
-                <img src="slike/treci.jpg" alt="Екскурзија трећи разред">
+                <img src="../slike/treci.jpg" alt="Екскурзија трећи разред">
             </div>
         </div>
 
@@ -76,7 +110,7 @@
                 </p>
             </div>
             <div class="image">
-                <img src="slike/cetvrti.jpg" alt="Матурантска екскурзија">
+                <img src="../slike/cetvrti.jpg" alt="Матурантска екскурзија">
             </div>
         </div>
 
@@ -100,5 +134,6 @@
         <p class="footer-rights">© Четрнаеста београдска гимназија 2024. Сва права задржана. WEB DIZAJN: studio Srbljanović</p>
     </footer>
 
+    <script src="/script.js"></script>
 </body>
 </html>
