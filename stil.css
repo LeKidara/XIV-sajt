@@ -29,13 +29,13 @@ html{
     width: 100%;
 }
 
-/* Make images responsive by default */
+/* Make images responsive by default 
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
-
+*/
 /* Navbar styles moved to `navbar.css` to avoid duplication. */
 
 
@@ -70,19 +70,19 @@ img {
 
 /*ringispil*/
 
-/* Stilovi za slike */
+/* Stilovi za slike 
 .carousel {
     position: relative;
     width: 80%;
-    /*max-width: 10000px;*/
+
     height: 650px;
     min-height: 320px;
     margin: 0 auto;
     overflow: hidden;
-    border-radius: 12px; /* consistent, crisp rounding */
+    border-radius: 12px; 
 }
 
-/* Stilovi za slike */
+
 .carousel-image {
     position: absolute;
     width: 100%;
@@ -91,16 +91,16 @@ img {
     background-position: center;
     opacity: 0;
     transition: opacity 1s ease;
-    border-radius: 0; /* let container provide rounded corners */
+    border-radius: 0; 
     z-index: 0;
 }
 
 .carousel-image.active {
     opacity: 1;
-    z-index: 2; /* ensure active slide is on top */
+    z-index: 2; 
 }
 
-/*trelice*/
+
 .carousel-arrow {
     position: absolute;
     top: 50%;
@@ -113,7 +113,7 @@ img {
     background: rgba(255,255,255,0.06);
     color: #16C79A;
     border: none;
-    padding: 0; /* use explicit size */
+    padding: 0; /* use explicit size 
     font-size: 26px;
     cursor: pointer;
     transition: transform 220ms cubic-bezier(.2,.9,.2,1), background 220ms ease, box-shadow 220ms ease, color 200ms ease;
@@ -133,7 +133,7 @@ img {
     right: 18px;
 }
 
-/* Hover/focus effects for arrows */
+
 .carousel-arrow:hover,
 .carousel-arrow:focus-visible {
     transform: translateY(-54%) scale(1.06);
@@ -148,160 +148,141 @@ img {
     outline-offset: 4px;
 }
 
-/*sadrzaj slika u ringispilu*/
-/* carousel background-image rules removed — slides use inline <img> now */
 
-/* Ensure inline carousel images fill their container and remain responsive */
 .carousel-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
     min-height: 180px;
-    border-radius: 0; /* images shouldn't add extra rounding */
+    border-radius: 0; 
 }
 
-/* Prefer inline <img> elements for the carousel. Disable background images
-   entirely to avoid duplication (background + inline image). */
+
 .image1, .image2, .image3, .image4 {
     background-image: none !important;
 }
 
-/*skolske vesti*/
+*/
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.news-section {
-    max-width: 95%;
-    margin: 50px auto;
-    padding: 20px;
-    text-align: center;
-}
+.carousel {
+            position: relative;
+            width: 100%;
+            height: 500px; /* Možeš podesiti visinu po želji */
+            overflow: hidden;
+        }
 
-.news-section h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-}
+        .carousel-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* Stilovi za članke */
-.news-articles {
+        .carousel-slide.active {
+            opacity: 1;
+        }
+
+        /* Zatamnjenje slike */
+        .carousel-slide::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45); /* Jačina zatamnjenja (0.45 = 45%) */
+            z-index: 1;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Slika ispunjava prostor bez razvlačenja */
+        }
+
+        /* Stil za tekst preko slike */
+        .carousel-caption {
+            position: absolute;
+            z-index: 2;
+            color: white;
+            text-align: center;
+            max-width: 80%;
+            font-family: 'Noto Sans', sans-serif;
+        }
+
+        .carousel-caption h2 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .carousel-caption p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Strelice za navigaciju */
+        .carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    
+    /* Dimenzije i oblik */
+    width: 50px;
+    height: 50px;
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Savršen krug */
     
-}
-
-.news-article {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    text-align: left;
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-.news-article:hover {
-
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
-    transition: all 0.3s ease;
-    transform: translateY(-3px); /* Efekat podizanja */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Intenzivnija senka */
-}
-
-/* Naslov vesti */
-.news-title {
-    font-size: 1.25rem;
-    color: #19456B;
-    margin-bottom: 5px;
-}
-
-/* Datum vesti */
-.news-date {
-    font-size: 0.9rem;
-    color: #888;
-    margin-bottom: 10px;
-}
-
-/* Kratak tekst vesti */
-.news-content {
-    font-size: 1rem;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-/* Dugme Pročitaj više */
-.read-more {
-    display: inline-block;
-    padding: 8px 12px;
-    font-size: 0.9rem;
-    color: white;
-    background-color: #19456B;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-decoration: none;
-}
-
-.read-more:hover {
-    background-color: #003d7a;
-}
-.custom-divider {
-    height: 2px; /* Debljina linije */
-    background-color: #19456B; /* Boja linije */
-    width: 80%; /* Linija ide preko celog ekrana */
-    margin: 30px 0; /* Razmak iznad i ispod linije */
-    display: inline-block;
-}
-.read-more-button {
-    background-color: #19456B; /* Osnovna boja dugmeta */
-    color: white;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease; /* Glatka tranzicija za hover efekat */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Lagana senka */
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-decoration: none;
-}
-.read-more-button1 {
-     /* Osnovna boja dugmeta */
-    color: white;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border: none;
+    /* Pozadina sa Glassmorphism efektom */
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(8px); /* Zamućuje ono što je iza strelice */
+    -webkit-backdrop-filter: blur(8px);
     
-    cursor: pointer;
-    transition: all 0.3s ease; /* Glatka tranzicija za hover efekat */
+    /* Ivica i senka */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    text-decoration: none;
+    /* Strelica (tekst/ikona) */
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Elastična animacija */
+    outline: none;
 }
 
-/* Hover efekat */
-.read-more-button:hover {
-    background-color: #003d7a; /* Tamnija nijansa na hover */
-    transform: translateY(-3px); /* Efekat podizanja */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5); /* Intenzivnija senka */
+/* Pozicioniranje levo i desno */
+.prev { left: 25px; }
+.next { right: 25px; }
+
+/* Efekat na prelazak mišem (Hover) */
+.carousel-arrow:hover {
+    background: rgba(255, 255, 255, 0.9); /* Postaje bela */
+    color: #19456B; /* Strelica menja boju u teget */
+    transform: translateY(-50%) scale(1.15); /* Malo se poveća */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
 }
 
-/* Centriranje dugmeta unutar containera */
-.button-container {
-    text-align: center;
-    text-decoration: none;
+/* Efekat kada se klikne */
+.carousel-arrow:active {
+    transform: translateY(-50%) scale(0.95);
 }
-
-
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -309,82 +290,7 @@ img {
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 /*o skoli*/
 
-.about-section {
-    display: flex;
-    align-items: stretch; /* let image and text stretch to same height */
-    /*max-width: 1000px;*/
-    width: 90%;
-    max-width: 1200px;
-    min-height: 320px; /* ensure a pleasant visual height so the image can cover */
-    margin: 80px auto; /* equal distance from top and bottom edges */
-    padding: 0; /* move padding to .about-text so image can touch the edge */
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
-    overflow: hidden;
-}
-.about-sadrzaj{
-    margin-top: 20px;
-}
-.about-line{
-    border: none;
-    border-top: 1px solid #19456B; /* Svetlija linija */
-    margin: 15px 0;
-    width: 100%; /* Linija je malo uža od celog footer-a */
-    margin: 15px auto; /* Centrirana */
-}
-/* Stilovi za sliku */
-.about-image {
-    flex: 0 0 48%;
-    /* cap image column so it doesn't stretch too wide */
-    min-width: 260px;
-    max-width: 520px;
-    height: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: center;
-}
 
-.about-image img,
-.about-image .about-photo {
-    width: 100%;
-    height: auto; /* keep aspect ratio, avoid vertical stretch */
-    max-height: 520px; /* prevent image from growing too tall */
-    display: block;
-    margin: 0 auto;
-    object-fit: cover; /* allow tasteful cropping if needed */
-    border-radius: 2%; /* rely on container rounding to avoid inner gaps */
-    box-shadow: none; /* remove heavy shadow so the whole card shadow is visible */
-    margin-left: 5%;
-}
-
-
-
-/* Stilovi za tekst */
-.about-text {
-    flex: 1 1 auto;
-    padding: 36px 36px;
-    margin: 0; /* spacing handled by internal padding */
-    border-radius: 0 8px 8px 0; /* rounded on the right to match the container */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* vertically center the text */
-}
-
-.about-text h2 {
-    font-size: 2rem;
-    color: #19456B;
-    margin-bottom: 10px;
-}
-
-.about-text p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 10px;
-}
 
 /*podnozje/footer*/
 /*------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -442,28 +348,30 @@ img {
 /* Za WebKit pretraživače (Chrome, Safari) */
 ::-moz-selection {
     background-color: #16C79A; /* Boja pozadine kada se selektuje */
-    color: white; /* Boja teksta kada se selektuje */
+    color: white; /* Boja teksta kada se selektuje 
     
 }
+
+
 .transition-link {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #00509e; /* Plava boja za dugmad */
+    background-color: #00509e; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 1.1em; /* Veći font za dugmad */
-    transition: background-color 0.3s, transform 0.3s; /* Tranzicije za boju i transformaciju */
+    font-size: 1.1em; 
+    transition: background-color 0.3s, transform 0.3s; 
 }
 
 .transition-link:hover {
-    background-color: #003d7a; /* Tamnija plava na hover */
-    transform: scale(1.05); /* Lagano uvećanje na hover */
+    background-color: #003d7a; 
+    transform: scale(1.05); 
 }
 
 .transition-link:active {
-    transform: scale(0.95); /* Umanjenje na pritisak */
+    transform: scale(0.95); */
 }
 
 /*optimizacija za telefon*/
@@ -476,46 +384,19 @@ img {
 
 
 @media (max-width: 615px){
-    .about-image img {
-        /* scale down and keep visible on small screens */
-        width: 100%;
-        max-width: 320px;
-        height: auto;
-        display: block;
-        margin: 0 auto;
-        border-radius: 12%;
-    }
+    
 }
 /*samo za veci ekran*/
 
 
 @media (max-width: 990px) {
-    .about-image img {
-        width: auto;
-        height: 400px;
-        border-radius: 30%;
-    }
-    .about-text p {
-        font-size: 0.8rem;
-        color: #333;
-        line-height: 1.6;
-        margin-bottom: 10px;
-    }
+   
 }
 
 /* Global mobile optimizations (conservative, low-risk) */
 @media (max-width: 768px) {
     /* Make large containers full-width and reduce padding */
-    .container,
-    .tab-container,
-    .about-section,
-    .erasmus-container,
-    .upis-container,
-    .news-container {
-        width: 95% !important;
-        padding: 12px !important;
-        margin: 18px auto !important;
-    }
+    
 
     /* Navbar compacting and small-screen navbar rules have been centralized
        into `navbar.css`. If you need page-specific navbar tweaks, add them
@@ -533,39 +414,16 @@ img {
     }
 
     /* Stack about section on small screens so image sits above text */
-    .about-section {
-        flex-direction: column;
-        min-height: auto;
-    }
-    .about-image {
-        flex: 0 0 auto;
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        margin: 0 auto;
-    }
-    .about-image img { /* make image natural height and rounded on top */
-        height: auto;
-        border-radius: 12px 12px 0 0;
-    }
-    .about-text {
-        border-radius: 0 0 12px 12px;
-        padding: 18px;
-    }
+    
     /* Reduce typography for small screens */
     h1 { font-size: 1.6rem; }
     h2 { font-size: 1.25rem; }
-    .news-section h2 { font-size: 1.4rem; }
+    
 
     /* Tidy up footers */
     .footer { font-size: 1rem; padding: 14px; }
 
-    /* Make lists easier to tap */
-    .pdf-links .pdf-button,
-    .offcanvas-links a,
-    .news-item {
-        font-size: 1rem;
-    }
+    
     /* reduce the navbar spacer on small screens where the navbar is shorter */
     .prazan {
         height: 80px;

@@ -500,31 +500,9 @@ body {
             overflow: hidden;
         }
 
-        .about-section {
-            display: flex;
-            align-items: center;
-            width: 97%;
-            height: auto;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-            border-radius: 8px;
-            overflow: hidden;
-        }
+        
 
-        .about-image img {
-            width: auto;
-            height: 400px;
-            border-radius: 30%;
-        }
-
-        .about-text p {
-            font-size: 0.8rem;
-            color: #333;
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
+        
     }
 
     @media (max-width: 1250px) {

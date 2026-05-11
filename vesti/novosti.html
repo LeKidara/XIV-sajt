@@ -7,63 +7,61 @@
     <title>Vesti XIV</title>
     <link rel="icon" href="ikonica.png" type="image/png">
     <link rel="stylesheet" href="novosti.css">
-    <link rel="stylesheet" href="/navbar.css">
+    <link rel="stylesheet" href="../navbar.css">
     <!-- Keep font consistent with index -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
-        <link rel="icon" href="slike/ikonica.png" type="image/png">
+        <link rel="icon" href="../slike/ikonica.png" type="image/png">
 
 
     <body>
     
       <nav class="navbar desktop-navbar">
         <div class="navbar-left">
-            <a href="index.html" class="navbar-brand">
-                <img src="slike/XIVlogoFinalno.png" alt="Logo" class="navbar-logo">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../slike/XIVlogoFinalno.png" alt="Logo" class="navbar-logo">
                 <span class="navbar-title">XIV гимназија</span>
             </a>
         </div>
         <div class="navbar-center">
             <ul class="navbar-menu">
-                <li><a href="index.html">Почетна</a></li>
+                <li><a href="../index.html">Почетна</a></li>
                 <li class="dropdown"><a href="#">О школи▼</a>
                     <div class="dropdown-content">
-                        <a class="hRed" href="../skoli/istorijat.html">Историјат</a>
-                        <a class="hRed" href="../skoli/ucenik.html">Ученик</a>
-                        <a class="hRed" href="../skoli/zaposleni.html">Запослени</a>
-                        <a class="hRed" href="../skoli/upis.html">Упис</a> 
                         <a class="hRed" href="../skoli/erasmus.html">Erasmus</a>
                         <a class="hRed" href="../skoli/etwinning.html">eTwinning</a>
-
+                        <a class="hRed" href="../skoli/istorijat.html">Историјат</a>
+                        <a class="hRed" href="../skoli/ucenici.html">Ученик</a>
+                        <a class="hRed" href="../skoli/upis.html">Упис</a>
+                        <a class="hRed" href="../skoli/zaposleni.html">Запослени</a>
                     </div>
                 </li>
 
                 <li class="dropdown"><a href="#">Вести▼</a>
                     <div class="dropdown-content">
-                        <a class="hRed" href="novosti.html">Новости</a>
                         <a class="hRed" href="Casopis.html">Школски часопис</a>
+                        <a class="hRed" href="novosti.html">Новости</a>
                         <a class="hRed" href="https://xivgimnazija.wordpress.com/">Aрхив</a>
                     </div>
                 </li>
 
                 <li class="dropdown"><a href="#">Настава▼</a>
                     <div class="dropdown-content">
+                        <a class="hRed" href="../nastava/IzPred.html">Изборни предмети</a>
                         <a class="hRed" href="../nastava/predmeti.html">Предмети</a>
                         <a class="hRed" href="../nastava/udzbenici.html">Уџбеници</a>
-                        <a class="hRed" href="../nastava/IzPred.html">Изборни предмети</a>
                     </div>
                 </li>
 
                 <li class="dropdown"><a href="#">Активонсти▼</a>
                     <div class="dropdown-content">
-                        <a class="hRed" href="../aktivnosti/ucenicki.html">Ученички парламент</a>
                         <a class="hRed" href="../aktivnosti/ekskurzije.html">Екскурзије и путовања</a>
-                        <a class="hRed" href="../aktivnosti/sekcije.html">Секције и ваннаставне активности</a>
+                        <a class="hRed" href="../aktivnosti/parlament.html">Ученички парламент</a>
+                        <a class="hRed" href="../aktivnosti/vannastavneak.html">Секције и ваннаставне активности</a>
                     </div>
                 </li>
 
-                <li class="dropdown"><a href="../orgrada/organizacijaRada.html">Организација рада</a>
-                </li>
+                <li class="dropdown"><a href="../orgrada/organizacijaRada.html">Организација рада</a></li>
             </ul>
             
         </div>
@@ -75,23 +73,24 @@
     </nav>
 
     <!-- Mobile Navbar with Hamburger Button -->
-    <div class="offcanvas" id="offcanvas">
+            <div class="offcanvas" id="offcanvas">
             <div class="offcanvas-header">
             <button class="exit-btn" id="exit-btn">X</button>
             </div>
     <ul class="offcanvas-links">
             <li>
-                <a href="index.html">Почетна</a>
+                <a href="../index.html">Почетна</a>
             </li>
             <li>
                     <a href="#" class="dropdown-toggle">O школи</a>
                     <!-- Podmeni -->
                     <ul class="dropdown-menu1">
-                        <li class="dropdown-content1"><a href="../skoli/istorijat.html">Историјат</a></li>
-                        <li class="dropdown-content1"><a href="../skoli/ucenik.html">Ученик</a></li>
-                        <li class="dropdown-content1"><a href="../skoli/zaposleni.html">Запослени</a></li>
-                        <li class="dropdown-content1"><a href="../skoli/upis.html">Упис</a></li>
                         <li class="dropdown-content1"><a href="../skoli/erasmus.html">Erasmus</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/etwinning.html">eTwinning</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/istorijat.html">Историјат</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/ucenici.html">Ученик</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/upis.html">Упис</a></li>
+                        <li class="dropdown-content1"><a href="../skoli/zaposleni.html">Запослени</a></li>
                     </ul>
             </li>
 
@@ -99,8 +98,8 @@
                 <a href="#" class="dropdown-toggle">Вестi</a>
                 <!-- Podmeni -->
                 <ul class="dropdown-menu1">
-                    <li class="dropdown-content1"><a href="novosti.html">Новости</a></li>
                     <li class="dropdown-content1"><a href="Casopis.html">Школски часопис</a></li>
+                    <li class="dropdown-content1"><a href="novosti.html">Новости</a></li>
                     <li class="dropdown-content1"><a href="https://xivgimnazija.wordpress.com/">Aрхив</a></li>
                 </ul>
             </li>
@@ -109,32 +108,32 @@
                 <a href="#" class="dropdown-toggle">Nastava</a>
                     <!-- Podmeni -->
                      <ul class="dropdown-menu1">
+                         <li class="dropdown-content1"><a href="../nastava/IzPred.html">Изборни предмети</a></li>
                          <li class="dropdown-content1"><a href="../nastava/predmeti.html">Предмети</a></li>
                          <li class="dropdown-content1"><a href="../nastava/udzbenici.html">Уџбеници</a></li>
-                         <li class="dropdown-content1"><a href="../nastava/IzPred.html">Изборни предмети</a></li>
                      </ul>
             </li>
             <li>
                 <a href="#" class="dropdown-toggle">Активонсти</a>
                 <!-- Podmeni -->
                 <ul class="dropdown-menu1">
-                <li class="dropdown-content1"><a href="../aktivnosti/ucenicki.html">Ученички парламент</a></li>
                 <li class="dropdown-content1"><a href="../aktivnosti/ekskurzije.html">Екскурзије и путовања</a></li>
-                <li class="dropdown-content1"><a href="../aktivnosti/sekcije.html">Секције и ваннаставне активности</a></li>
+                <li class="dropdown-content1"><a href="../aktivnosti/parlament.html">Ученички парламент</a></li>
+                <li class="dropdown-content1"><a href="../aktivnosti/vannastavneak.html">Секције и ваннаставне активности</a></li>
                 </ul>
             </li>
             <li>
                 <a href="../orgrada/organizacijaRada.html">Organizacija rada</a>
+
             </li>
         </ul>
     </div>
-
- <div class = "prazan"></div>
+<div class = "prazan"></div>
     
 
     <section class="news-container">
 
-        <h2 class="news-naslov">Školske vesti</h2>
+        <h2 class="news-naslov">Школске вести</h2>
         <div class="custom-divider"></div>
         <div class = "prazan1"></div>
         <!-- Svaka vest je statički HTML element -->
