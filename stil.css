@@ -1,32 +1,35 @@
 /* Opšti stilovi */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap');
 
+/* --- 1. CSS VARIJABLE --- */
+:root {
+    --primary-color: #16C79A;       
+    --primary-hover: #12a67f;       
+    --secondary-color: #00509e;     
+    --bg-color: #f4f7f6;            
+    --container-bg: #ffffff;        
+    --text-main: #333333;           
+    --text-muted: #555555;          
+    --border-color: #eaeaea;        
+    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --border-radius: 12px;
+}
+
+/* --- 2. GLOBALNI RESET I OSNOVNI STILOVI --- */
+* {
     margin: 0;
     padding: 0;
-    /*box-sizing: border-box;*/ 
+    box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&display=swap');
-
-/* NOTE: CSS variables were previously defined here. Per request, values are inlined below. */
 
 body {
-    /* Navbar is fixed; use a spacer element (.prazan) on pages so content is not hidden under the navbar.
-       Remove global top margin to avoid double-spacing when .prazan is present. */
-    margin-top: 0;
-    /* Navbar styles moved to `navbar.css` to avoid duplication. Any page-specific navbar tweaks should be added there or kept here if truly page-specific. */
-
-    font-family: 'Noto Sans', Arial, sans-serif;
-    background-color: #F8F1F1;
-    color: #333;
-    line-height: 1.6;
-    overflow-x: hidden; /* Onemogućava horizontalni skrol */
-    width: 100%;
-
-}
-html{
-    overflow-x: hidden; /* Onemogućava horizontalni skrol */
-    width: 100%;
+    font-family: 'Noto Sans', Arial, sans-serif !important;
+    background-color: var(--bg-color) !important;
+    color: var(--text-main);
+    line-height: 1.7;
+    padding-top: 30px; 
+    overflow-x: hidden;
 }
 
 /* Make images responsive by default 

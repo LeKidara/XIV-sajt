@@ -28,9 +28,24 @@ body {
 
 h1 {
     text-align: center;
-    margin-top: 30px;
-    color: #00509e;
-    font-size: 2em;
+    font-weight: 700;
+    color: #19456B; /* Teget plava */
+    margin-bottom: 40px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Stil za liniju ispod naslova */
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%); /* Trik za savršeno centriranje */
+    width: 60px; /* Dužina linije */
+    height: 4px; /* Debljina linije */
+    background-color: #16C79A; /* Mint zelena */
+    border-radius: 2px;
 }
 
 .container {

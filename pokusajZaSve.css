@@ -1,0 +1,300 @@
+/* ==========================================================================
+   ZAJEDNIČKI MODERNI STIL ZA SVE STRANICE V2 (Otporan na Bootstrap)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap');
+
+/* --- 1. CSS VARIJABLE --- */
+:root {
+    --primary-color: #16C79A;       
+    --primary-hover: #12a67f;       
+    --secondary-color: #00509e;     
+    --bg-color: #f4f7f6;            
+    --container-bg: #ffffff;        
+    --text-main: #333333;           
+    --text-muted: #555555;          
+    --border-color: #eaeaea;        
+    --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.08);
+    --border-radius: 12px;
+}
+
+/* --- 2. GLOBALNI RESET I OSNOVNI STILOVI --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Noto Sans', Arial, sans-serif !important;
+    background-color: var(--bg-color) !important;
+    color: var(--text-main);
+    line-height: 1.7;
+    padding-top: 30px; 
+    overflow-x: hidden;
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- 3. ZAJEDNIČKI KONTEJNERI (Sada otporni na Bootstrap) --- */
+.container, 
+.upis-container, 
+.erasmus-container, 
+.etwin-container, 
+.ekskurzije-container, 
+.parlament-container, 
+.aktivnosti-container,
+.about-section {
+    width: 90% !important;
+    max-width: 1050px !important;
+    margin: 40px auto !important;
+    background-color: var(--container-bg) !important;
+    padding: 50px !important;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-lg);
+    border-left: 6px solid var(--primary-color) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover, 
+.upis-container:hover, 
+.erasmus-container:hover, 
+.etwin-container:hover, 
+.ekskurzije-container:hover, 
+.parlament-container:hover, 
+.aktivnosti-container:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* --- 4. TIPOGRAFIJA --- */
+h1, .h1 {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 18px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+}
+
+ul {
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: var(--text-muted);
+}
+
+/* --- 5. MODERNI LINKOVI --- */
+p a, li a, .project-list a {
+    color: var(--secondary-color);
+    text-decoration: none !important;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Animacija podvlačenja za obične linkove */
+p a::after, li a::after, .project-list a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary-color);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+p a:hover, li a:hover, .project-list a:hover {
+    color: var(--primary-color);
+}
+
+p a:hover::after, li a:hover::after, .project-list a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* --- 6. DUGMAD (PDF, Arhiva) --- */
+.pdf-links {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.pdf-button, .arhiva-dugme {
+    display: inline-block;
+    padding: 12px 28px;
+    margin: 10px;
+    background-color: var(--primary-color);
+    color: #ffffff !important;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(22, 199, 154, 0.3);
+}
+
+.pdf-button:hover, .arhiva-dugme:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(22, 199, 154, 0.4);
+    color: #ffffff !important;
+}
+
+.arhiva-sadrzaj {
+    display: none;
+    background: #fafafa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid var(--border-color);
+}
+.aktivno { display: block; }
+
+/* --- 7. SLIKE --- */
+.image img, 
+.parlament-image img, 
+.etwin-image img, 
+.about-image1 img {
+    width: 100%;
+    max-width: 700px;
+    display: block;
+    margin: 0 auto 30px auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s ease;
+}
+
+.image img:hover, 
+.parlament-image img:hover, 
+.etwin-image img:hover {
+    transform: scale(1.02);
+}
+
+/* --- 8. NAPOMENE, CITATI I UVODI --- */
+.uvod, .note, .napomena {
+    background-color: rgba(22, 199, 154, 0.08);
+    border-left: 4px solid var(--primary-color);
+    padding: 20px 25px;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+    margin: 30px 0;
+    color: var(--text-main);
+    font-size: 1.1rem;
+}
+
+/* --- 9. GRID I FLEXBOX STRUKTURE --- */
+.year-section, .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 50px;
+}
+.year-section .text, .about-section .about-text1 { flex: 1; }
+.year-section .image, .about-section .about-image1 { flex: 1; }
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.column {
+    flex: 1;
+    min-width: 250px;
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+}
+
+.aktivnosti-grid { display: flex; flex-direction: column; gap: 30px; }
+.aktivnost {
+    display: flex; align-items: center; gap: 30px; background: #fff;
+    padding: 20px; border-radius: 10px; box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color); transition: transform 0.2s;
+}
+.aktivnost:hover { transform: translateY(-5px); }
+.aktivnost img {
+    width: 130px; height: 130px; border-radius: 50%;
+    object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin: 0;
+}
+.aktivnost .info { flex: 1; }
+
+.category h2 {
+    background-color: var(--secondary-color); color: white;
+    padding: 10px 25px; border-radius: 8px; border: none; font-size: 1.4rem;
+}
+.grupa { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.grupa .red {
+    background-color: #f9f9f9; padding: 10px 20px; border-radius: 6px;
+    border: 1px solid var(--border-color); flex: 1 1 calc(33.333% - 20px); min-width: 200px;
+}
+
+/* --- 10. POMOĆNE KLASE --- */
+.prazan { height: 90px; }
+.prazan1 { height: 30px; }
+
+/* --- 11. ZAJEDNIČKI FOOTER --- */
+.footer {
+    background-color: var(--primary-color) !important;
+    color: white; padding: 40px 20px 20px; margin-top: auto;
+}
+.footer-content {
+    display: flex; justify-content: center; align-items: center; gap: 60px;
+    flex-wrap: wrap; max-width: 1000px; margin: 0 auto;
+}
+.footer-column p { color: white; margin: 5px 0; font-size: 1.05rem; }
+.footer-line {
+    border: none; border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin: 25px auto 15px auto; width: 80%; max-width: 800px;
+}
+.footer-rights { text-align: center; font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); margin: 0; }
+
+/* --- 12. RESPONZIVNOST --- */
+@media (max-width: 768px) {
+    .container, .upis-container, .erasmus-container, .etwin-container, 
+    .ekskurzije-container, .parlament-container, .aktivnosti-container {
+        width: 95% !important; padding: 25px !important; margin: 20px auto !important;
+    }
+    .year-section, .about-section { flex-direction: column; text-align: center; gap: 20px; }
+    .aktivnost { flex-direction: column; text-align: center; }
+    .aktivnost img { margin: 0 auto; }
+    h1, .h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    .footer-content { flex-direction: column; gap: 20px; text-align: center; }
+}
